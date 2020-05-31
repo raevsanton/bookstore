@@ -40,14 +40,8 @@
   &__buy {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
-    button {
-      margin-left: 9px;
-      @include sm {
-        margin-left: 0;
-      }
-    }
     @include md {
       justify-content: start;
     }

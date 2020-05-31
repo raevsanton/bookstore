@@ -21,7 +21,8 @@ const ItemBook: React.FC<ItemBookProps> = ({
                     })}
                 </div>
                 <div className="book__buy">
-                    <h3>{book.saleInfo.listPrice.amount} ₪</h3>
+                    <h3>{Math.ceil(book.saleInfo.listPrice.amount)} ₪</h3>
+                    <div>
                     {isInCart
                         ?   <button className="book__remove" onClick={() => {
                                 removeBookFromCart(book.id, book.saleInfo.listPrice.amount)
@@ -32,6 +33,7 @@ const ItemBook: React.FC<ItemBookProps> = ({
                             }}
                             >Put</button>
                     }
+                    </div>
                 </div>
             </div>
         </div>

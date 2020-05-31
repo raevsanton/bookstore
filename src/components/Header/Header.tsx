@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                 <img src={logo} alt="logo"/>
             </a>
             <div className="header__wrp">
-                <h2>{totalPrice} ₪</h2>
+                <h2>{Math.ceil(totalPrice)} ₪</h2>
                 <Popup
                     trigger={
                         <div className="header__cart">

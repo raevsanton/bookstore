@@ -29,7 +29,7 @@ const Cart: React.FC<CartProps> = ({
                                         <div>
                                             <h4>{book.volumeInfo.title}</h4>
                                             <p>{`${book.volumeInfo.authors}`}</p>
-                                            <h4>{book.saleInfo.listPrice.amount}  ₪</h4>
+                                            <h4>{Math.ceil(book.saleInfo.listPrice.amount)}  ₪</h4>
                                         </div>
                                     </div>
                                     <div className="cart__remove" onClick={() => {
@@ -43,7 +43,7 @@ const Cart: React.FC<CartProps> = ({
                         )}
                         <div className="cart__price">
                             <h3>Total:</h3>
-                            <h2>{`⠀${totalPrice}`} ₪</h2>
+                            <h2>{`⠀${Math.ceil(totalPrice)}`} ₪</h2>
                         </div>
                     </div>
             }
