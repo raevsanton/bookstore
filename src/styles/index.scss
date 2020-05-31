@@ -26,6 +26,7 @@ button {
   width: 140px;
   height: 40px;
   text-transform: uppercase;
+  outline: none;
   &:hover {
     background-size: 150% 100%;
     transition: .5s ease-in-out;
