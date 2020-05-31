@@ -1,0 +1,98 @@
+@import "../../styles/mixins.scss";
+
+.cart {
+  z-index: 2;
+  width: 500px;
+  height: 460px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 1px -1px 19px rgba(68, 104, 161, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 32px;
+  ::-webkit-scrollbar { width: 3px; height: 3px;}
+  ::-webkit-scrollbar-button {  background-color: #fff; }
+  ::-webkit-scrollbar-track {  background-color: #999;}
+  ::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+  ::-webkit-scrollbar-thumb { height: auto; background-color: #bfbfbf; border-radius: 3px;}
+  ::-webkit-scrollbar-corner { background-color: #999;}
+  ::-webkit-resizer { background-color: #666;}
+  scrollbar-width: thin;
+  scrollbar-color: #bfbfbf #fff;
+  &__title {
+    color: #313796;
+    margin-bottom: 20px;
+    &--center {
+      display: flex;
+      justify-content: center;
+      color: #505050;
+    }
+  }
+  @include sm {
+    width: 100%;
+  }
+  &__wrp {
+    overflow: auto;
+    max-height: 375px;
+  }
+  &__item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    p {
+      color: #6e6e6e;
+    }
+    h4 {
+      color: #0b0f33;
+    }
+  }
+  &__cover {
+    margin-right: 15px;
+    img {
+      width: 60px;
+    }
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__price {
+    display: flex;
+    align-items: baseline;
+    position: absolute;
+    bottom: 24px;
+    h2, h3 {
+      color: #000;
+    }
+  }
+  &__empty {
+    margin-top: 100px;
+  }
+  &__remove {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    margin: auto 0;
+    img {
+      margin-right: 30px;
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    @include sm {
+      flex-direction: column;
+      align-items: baseline;
+    }
+  }
+}
+
+.popup-content {
+  background: none !important;
+  border: none !important;
+}

@@ -1,0 +1,44 @@
+@import "../../styles/mixins.scss";
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  input {
+    width: 40%;
+  }
+  @include sm {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.header {
+  &__count {
+    position: absolute;
+    top: 35px;
+    right: 31px;
+    background-color: #ff8a00;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    span {
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+  &__cart {
+    position: relative;
+    cursor: pointer;
+    margin-left: 50px;
+  }
+  &__wrp {
+    display: flex;
+    align-items: center;
+    @include xs {
+      margin-top: 30px;
+    }
+  }
+}

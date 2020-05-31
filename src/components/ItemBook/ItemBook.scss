@@ -1,0 +1,64 @@
+@import "../../styles/mixins.scss";
+.book {
+  &__item {
+    display: flex;
+    justify-content: space-around;
+    width: 355px;
+    margin: 16px;
+    padding: 32px;
+    border-radius: 32px;
+    background: linear-gradient(#71717140, rgba(0, 0, 0, 0));
+    &:hover img {
+      transform: translateY(-15px);
+      transition: transform .3s cubic-bezier(.52,.28,.47,1.15),
+      -webkit-transform .3s cubic-bezier(.52,.28,.47,1.15);
+    }
+    & img {
+      border-radius: 16px;
+      transition: transform .3s cubic-bezier(.52,.28,.47,1.15),
+      -webkit-transform .3s cubic-bezier(.52,.28,.47,1.15);
+    }
+    @include md {
+      width: 100%;
+      justify-content: start;
+    }
+  }
+  &__info {
+    margin-left: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      opacity: .5;
+      font-size: 14px;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    button {
+      margin-left: 9px;
+      @include sm {
+        margin-left: 0;
+      }
+    }
+    @include md {
+      justify-content: start;
+    }
+    @include sm {
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+  }
+  &__remove {
+    background: #e52e71;
+    transition: all .5s linear;
+    color: #fff;
+  }
+}
