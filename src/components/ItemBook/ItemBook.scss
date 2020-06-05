@@ -14,7 +14,7 @@
       -webkit-transform .3s cubic-bezier(.52,.28,.47,1.15);
     }
     & img {
-      border-radius: 16px;
+      border-radius: 0 16px 16px 0;
       transition: transform .3s cubic-bezier(.52,.28,.47,1.15),
       -webkit-transform .3s cubic-bezier(.52,.28,.47,1.15);
     }
