@@ -2,17 +2,151 @@
 
 main {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 50px;
   @include xl {
     justify-content: space-around;
   }
+  @include md {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
 }
 
-.main__error {
+.main {
+  &__error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  &__left {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 100%;
+    margin-left: 40px;
+    h1 {
+      margin-bottom: 30px;
+    }
+    @include md {
+      margin-left: 0;
+    }
+  }
+  &__face {
+    width: 90px;
+    border-radius: 100px;
+    border: 3px #fff solid;
+    box-shadow: 0 24px 24px -12px rgba(38,38,38,.2);
+    margin-bottom: 15px;
+  }
+  &__profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__count {
+    position: absolute;
+    top: 4px;
+    right: 21px;
+    background-color: #ff8a00;
+    border-radius: 100%;
+    width: 29px;
+    height: 29px;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 17px;
+      margin-top: 2px;
+    }
+  }
+  &__name {
+    margin-bottom: 45px;
+    font-weight: 400;
+    @include md {
+      margin-bottom: 15px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include md {
+      justify-content: space-between;
+    }
+  }
+  &__button {
+    display: flex;
+    margin: 15px 0 15px 20px;
+    text-decoration: none;
+    padding: 17px 30px;
+    transition: all 0.4s ease 0s;
+    border-radius: 100px;
+    &:hover {
+      transition: all 0.4s ease 0s;
+      color: #fff;
+      background-color: #1f4d8f;
+      box-shadow: 0 24px 24px -12px hsla(215, 64%, 34%, 0.4);
+      .fa-book, .fa-bookmark, .fa-question-circle {
+        color: #fff;
+        transition: all 0.4s ease 0s;
+      }  
+    }
+  }
+}
+
+nav {
+  p {
+    margin-left: 15px;
+  }
+  ul {
+    @include md {
+      display: flex;
+    }
+    @include sm {
+      display: block;
+    }
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.page {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
 }

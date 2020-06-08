@@ -1,4 +1,9 @@
 @font-face {
-  font-family: Segoe UI;
-  src: local("Segoe UI"), url(../assets/fonts/Segoe-UI.woff) format("woff")
+  font-family: 'YesevaOne-Regular';
+  src: local('YesevaOne-Regular'), url(../assets/fonts/YesevaOne-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: local('OpenSans-Regular'), url(../assets/fonts/OpenSans-Regular.woff) format('woff');
 }

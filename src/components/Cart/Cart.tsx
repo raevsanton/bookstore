@@ -11,43 +11,53 @@ const Cart: React.FC<CartProps> = ({
     booksInCart
 }) => {
     return (
-        <div className="cart">
-            <h2 className="cart__title">My Bookshelf</h2>
-            {booksInCart.length === 0
-                ?   <div>
-                        <img className="cart__empty" src={emptyCart} alt="emptyCart"/>
-                        <h2 className="cart__title--center">Is empty</h2>
-                    </div>
-                :   <div className="cart__wrp">
-                        {booksInCart.map((book : Book) =>
-                            <div key={book.id}>
-                                <div className="cart__item" >
-                                    <div className="cart__wrapper">
-                                        <div className="cart__cover">
-                                            <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="cover" />
-                                        </div>
-                                        <div>
-                                            <h4>{book.volumeInfo.title}</h4>
-                                            <p>{`${book.volumeInfo.authors}`}</p>
-                                            <h4>{Math.ceil(book.saleInfo.listPrice.amount)}  ₪</h4>
-                                        </div>
-                                    </div>
-                                    <div className="cart__remove" onClick={() => {
-                                        removeBookFromCart(book.id, book.saleInfo.listPrice.amount)}}
-                                    >
-                                        <img src={removeItem} alt="removeItem" />
-                                    </div>
-                                </div>
-                                <hr />
-                            </div>
-                        )}
-                        <div className="cart__price">
-                            <h3>Total:</h3>
-                            <h2>{`⠀${Math.ceil(totalPrice)}`} ₪</h2>
+        <>
+            <h1>Bookshelf</h1>
+            <div className="bookpage">
+                {booksInCart.length === 0
+                    ?   <div className="cart__empty">
+                            <img src={emptyCart} alt="emptyCart"/>
+                            <h2 className="cart__title--center">Is empty</h2>
                         </div>
-                    </div>
-            }
-        </div>
+                    :   <div className="cart__wrp">
+                            {booksInCart.map((book : Book) =>
+                                <div key={book.id}>
+                                    <div className="cart__item" >
+                                        <div className="cart__wrapper">
+                                            <div className="cart__cover">
+                                                <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="cover" />
+                                            </div>
+                                            <div>
+                                                <h2 className="cart__title">{book.volumeInfo.title}</h2>
+                                                <div className="bookpage__authors">
+                                                    {book.volumeInfo.authors.map((author : string, index : number) => {
+                                                        return <span key={index}>{author}</span>
+                                                    })}
+                                                </div>
+                                                <div className="bookpage__price">
+                                                    <h2 className="cart__price">{Math.ceil(book.saleInfo.listPrice.amount)}</h2>
+                                                    <h4>{book.saleInfo.listPrice.currencyCode}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="cart__remove" onClick={() => {
+                                            removeBookFromCart(book.id, book.saleInfo.listPrice.amount)}}
+                                        >
+                                            <img src={removeItem} alt="removeItem" />
+                                        </div>
+                                    </div>
+                                    <hr />
+                                </div>
+                            )}
+                            <div className="cart__total">
+                                <h3>Total:</h3>
+                                <h2>{`⠀${Math.ceil(totalPrice)}⠀`}</h2>
+                                <h4>{booksInCart[0].saleInfo.listPrice.currencyCode}</h4>
+                            </div>
+                        </div>
+                }
+            </div>
+        </>
     );
 };
 

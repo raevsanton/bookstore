@@ -9,6 +9,7 @@
 - React
 - Redux
 - Redux-Thunk
+- React-Router
 - TypeScript
 - Axios
 - SCSS

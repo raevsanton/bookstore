@@ -1,3 +1,5 @@
+@import "fonts";
+
 * {
   text-decoration: none;
   margin: 0;
@@ -7,17 +9,24 @@
 }
 
 body {
-  font-family: Segoe UI,sans-serif;
+  font-family: OpenSans-Regular;
   background: #f7f6f1;
   margin: 0 30px;
   color: #090b28;
 }
 
+h1, h2, h3, h4 {
+  font-family: YesevaOne-Regular;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+}
+
 button {
-  font-family: Segoe UI,sans-serif;
+  font-family: OpenSans-Regular;
   transition: .5s ease-in-out;
-  background-image: linear-gradient(90deg, #517abc, #2FDF84);
-  color: #fff;
   border-radius: 200px;
   border: none;
   font-weight: 900;
@@ -25,8 +34,10 @@ button {
   cursor: pointer;
   width: 140px;
   height: 40px;
-  text-transform: uppercase;
   outline: none;
+  color: #fff;
+  background-color: #1f4d8f;
+  box-shadow: 0 24px 24px -12px hsla(215, 64%, 34%, 0.4);
   &:hover {
     background-size: 150% 100%;
     transition: .5s ease-in-out;
@@ -34,6 +45,11 @@ button {
 }
 
 hr {
+  width: 100%;
   opacity: .8;
   margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
 }
