@@ -14,7 +14,6 @@ const BookPage: React.FC<BookPageProps> = props => {
         item.id === book.id
     )
     let subtitle = book.volumeInfo.subtitle === undefined ? null : `«${book.volumeInfo.subtitle}»`;
-    console.log(match)
     return (
       <div className="bookpage">
         <img className="bookpage__cover" src={book.volumeInfo.imageLinks.smallThumbnail} alt="cover-book"/>
