@@ -1,0 +1,31 @@
+.switch {
+    position: relative;
+    &__line {
+        position: relative;
+        width: 50px;
+        height: 22px;
+        vertical-align: middle;
+        background-color: #4f4f4f;
+        border: 0;
+        border-radius: 100px;
+    }
+    &__circle {
+        position: absolute;
+        top: 2px;
+        left: -1px;
+        width: 22px;
+        height: 22px;
+        border-radius: 100px;
+        background-color: #b3b3b3;
+        cursor: pointer;
+        transition: all .36s cubic-bezier(.78,.14,.15,.86);
+    }
+    .on-line {
+        background-color: #c5c5c5;
+    }
+    .on-circle {
+        left: calc(100% - 22px);
+        background-color: #fff;
+        transition: all .36s cubic-bezier(.78,.14,.15,.86);
+    }
+}

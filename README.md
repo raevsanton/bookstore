@@ -1,8 +1,8 @@
 <h1 align="center">
-    <img src="https://user-images.githubusercontent.com/32206164/83352618-76dd8c80-a355-11ea-961f-151b256e30a3.png" alt="logo">
+    <img src="https://user-images.githubusercontent.com/32206164/84589665-cf725680-ae38-11ea-828b-b20eada43eae.png" alt="logo">
 </h1>
 
-<h4 align="center">:blue_book: Project store for buying books</h4>
+<h4 align="center">:ledger: Project store for buying books</h4>
 
 ## Stack Technologies
 
@@ -10,9 +10,11 @@
 - Redux
 - Redux-Thunk
 - React-Router
+- React-hook-form
 - TypeScript
 - Axios
 - SCSS
+- Classnames
 
 ## Installation
 

@@ -1,12 +1,13 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 import './styles/index.scss';
-import {Provider} from "react-redux";
-import {applyMiddleware, compose, createStore} from "redux";
-import {rootReducer} from "./reducers";
+import { Provider } from "react-redux";
+import { applyMiddleware, compose, createStore } from "redux";
+import { rootReducer } from "./reducers";
+import { BrowserRouter } from "react-router-dom";
+import { loadState, saveState } from "./utils/localStorage";
 import thunk from "redux-thunk";
 import App from "./components/App";
-import { BrowserRouter } from "react-router-dom";
 
 const composeEnhancers =
     // @ts-ignore
@@ -16,9 +17,23 @@ const enhancer = composeEnhancers(
     applyMiddleware(thunk)
 );
 
-const store = createStore(rootReducer, enhancer);
+const savedState = loadState();
 
-ReactDOM.render(
+const store = createStore(
+  rootReducer, 
+  savedState, 
+  enhancer
+);
+
+store.subscribe(() => {
+  saveState({
+    profile: store.getState().profile,
+    cart: store.getState().cart,
+    theme: store.getState().theme
+  });
+});
+
+render(
   <Provider store={store}>
     <BrowserRouter>
       <App />

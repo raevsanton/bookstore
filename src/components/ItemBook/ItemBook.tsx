@@ -1,6 +1,6 @@
 import React from "react";
 import "./ItemBook.scss"
-import {ItemBookProps} from "./ItemBookTypes";
+import { ItemBookProps } from "./ItemBookTypes";
 
 const ItemBook: React.FC<ItemBookProps> = ({
     book

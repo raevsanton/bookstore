@@ -1,25 +1,36 @@
 import React from "react";
 import "./Main.scss";
-import {useEffect} from "react";
-import Preloader from "../Preloader/Preloader";
-import ItemBook from "../../components/ItemBook/ItemBook";
-import {Book} from "../../types/types";
-import {MainProps} from "./MainTypes";
 import face from "../../assets/images/face.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark } from '@fortawesome/free-regular-svg-icons';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { Switch, Link, Route } from "react-router-dom";
 import BookPage from "../../containers/BookPage";
 import Cart from "../../containers/Cart";
+import Profile from "../Profile/Profile";
+import Preloader from "../Preloader/Preloader";
+import ItemBook from "../../components/ItemBook/ItemBook";
+import { useEffect } from "react";
+import { Book } from "../../types/types";
+import { MainProps } from "./MainTypes";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { Switch, Link, Route } from "react-router-dom";
+import { useSelector } from 'react-redux';
+import { AppStateType } from "../../reducers";
+import SwitchTheme from "../SwitchTheme/SwitchTheme";
 
-const Main: React.FC<MainProps> = (props) => {
-
-    const {books, getBooks, booksInCart, loadingBooks, error} = props;
-
+const Main: React.FC<MainProps> = ({
+    books, 
+    getBooks, 
+    booksInCart, 
+    loadingBooks, 
+    error, 
+    firstName, 
+    lastName
+}) => {
     useEffect(() => {
         getBooks()
     }, [getBooks]);
+
+    let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
+    darkMode ? document.body.className = 'dark' : document.body.className = '';
 
     if (loadingBooks) {
         return <Preloader/>
@@ -31,14 +42,17 @@ const Main: React.FC<MainProps> = (props) => {
     return (
         <main>
             <div className="main__left">
-                <div className="main__profile">
-                    <img className="main__face" src={face} alt="profile-face" />
-                    <h3 className="main__name">Anton Raevsky</h3>
-                    <div className="main__count">
-                        <p>{booksInCart.length}</p>
+                <Link to="/profile">
+                    <div className={`main__profile ${darkMode && "dark-background"}`}>
+                        <div className="main__avatar">
+                            <div className="main__count">
+                                <p>{booksInCart.length}</p>
+                            </div>
+                            <img className="main__face" src={face} alt="profile-face" />
+                        </div>
+                        <h3 className="main__name">{firstName} {lastName}</h3>
                     </div>
-                </div>
-                <hr />
+                </Link>
                 <nav>
                     <ul>
                         <li>
@@ -55,11 +69,12 @@ const Main: React.FC<MainProps> = (props) => {
                         </li>
                     </ul>
                 </nav>
+                <SwitchTheme />
             </div>
             <div className="main__right">
                 <Switch>
                     <Route path={'/'} exact> 
-                        <h1>My Library</h1>
+                        <h1 className="main__title">My Library</h1>
                         <div className="main__list">
                             {books.map((book: Book) => (
                                 <Link to={`book/${book.id}`} key={book.id}>
@@ -81,6 +96,7 @@ const Main: React.FC<MainProps> = (props) => {
                             />
                         }
                     />
+                    <Route path={'/profile'} component={Profile} />
                 </Switch>
             </div>
         </main>

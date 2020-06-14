@@ -1,6 +1,6 @@
 {
   "name": "bookstore",
-  "version": "0.1.0",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -13,9 +13,11 @@
     "@types/react-redux": "^7.1.8",
     "@types/react-router-dom": "^5.1.5",
     "axios": "^0.19.2",
+    "classnames": "^2.2.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^5.7.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
