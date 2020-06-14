@@ -5,6 +5,8 @@ export interface MapStateMainProps {
     booksInCart: Array<Book>
     loadingBooks: boolean
     error: boolean
+    firstName: string
+    lastName: string
 }
 export interface MapDispatchMainProps {
     getBooks: () => void

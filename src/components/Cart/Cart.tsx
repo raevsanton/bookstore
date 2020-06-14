@@ -1,19 +1,22 @@
 import React from 'react';
 import './Cart.scss';
+import { Book } from "../../types/types";
+import { CartProps } from "./CartTypes";
 import emptyCart from "../../assets/images/empty-bookshelf.svg";
 import removeItem from "../../assets/images/close.svg";
-import {Book} from "../../types/types";
-import {CartProps} from "./CartTypes";
+import { useSelector } from 'react-redux';
+import { AppStateType } from '../../reducers';
 
 const Cart: React.FC<CartProps> = ({
     removeBookFromCart,
     totalPrice,
     booksInCart
 }) => {
+    let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
     return (
         <>
-            <h1>Bookshelf</h1>
-            <div className="bookpage">
+            <h1 className="main__title">Bookshelf</h1>
+            <div className={`bookpage ${darkMode && "dark-background"}`}>
                 {booksInCart.length === 0
                     ?   <div className="cart__empty">
                             <img src={emptyCart} alt="emptyCart"/>
@@ -34,9 +37,9 @@ const Cart: React.FC<CartProps> = ({
                                                         return <span key={index}>{author}</span>
                                                     })}
                                                 </div>
-                                                <div className="bookpage__price">
+                                                <div className={`bookpage__price ${darkMode && "dark-white"}`}>
                                                     <h2 className="cart__price">{Math.ceil(book.saleInfo.listPrice.amount)}</h2>
-                                                    <h4>{book.saleInfo.listPrice.currencyCode}</h4>
+                                                    <h4 className={`cart__currency ${darkMode && "dark-white"}`}>{book.saleInfo.listPrice.currencyCode}</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -50,8 +53,8 @@ const Cart: React.FC<CartProps> = ({
                                 </div>
                             )}
                             <div className="cart__total">
-                                <h3>Total:</h3>
-                                <h2>{`⠀${Math.ceil(totalPrice)}⠀`}</h2>
+                                <h3 className={`${darkMode && "dark-white"}`}>Total:</h3>
+                                <h2 className={`${darkMode && "dark-white"}`}>{`⠀${Math.ceil(totalPrice)}⠀`}</h2>
                                 <h4>{booksInCart[0].saleInfo.listPrice.currencyCode}</h4>
                             </div>
                         </div>

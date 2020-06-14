@@ -1,4 +1,6 @@
 @import "fonts";
+@import "dark";
+@import "mixins";
 
 * {
   text-decoration: none;
@@ -44,6 +46,37 @@ button {
   }
 }
 
+input {
+  display: block;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 15px;
+  width: 350px;
+  height: 40px;
+  border: 1px solid #EBE9E0;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  transition: .3s ease-in-out;
+  &:focus {
+    border: 1px solid #c2c2ba;
+    transition: .3s ease-in-out;
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+
+label {
+  line-height: 2;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
 hr {
   width: 100%;
   opacity: .8;
@@ -52,4 +85,8 @@ hr {
 
 p {
   font-size: 14px;
+}
+
+form button {
+  margin-top: 20px;
 }

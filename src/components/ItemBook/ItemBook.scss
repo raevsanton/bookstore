@@ -17,6 +17,11 @@
       box-shadow: 0 24px 24px -12px rgba(38, 38, 38, 0.2);
       border: 0.5px rgba(0, 0, 0, 0.14) solid;
     }
+    @include sm {
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+    }
   }
   &__info {
     margin: 10px 0;

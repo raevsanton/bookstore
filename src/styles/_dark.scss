@@ -1,0 +1,18 @@
+.dark {
+    background-color: #4f4f4f;
+    color: #dedede;
+    &-text {
+        color: #4f4f4f;
+    }
+    &-background {
+        background-color: #404040 !important;
+    }
+    &-white {
+        color: #dedede !important;
+    }
+    &-input {
+        background: #404040;
+        border: 1px solid #5d5d5d;
+        color: #dedede;
+    }
+}

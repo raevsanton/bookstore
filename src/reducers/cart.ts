@@ -1,7 +1,7 @@
 import {
     ADD_BOOK_TO_CART,
     REMOVE_BOOK_FROM_CART,
-    CartActionsType
+    CartActions
 } from "../actions/types";
 import {Book} from "../types/types";
 import {InitialStateCart} from "./types";
@@ -11,7 +11,7 @@ const initialState: InitialStateCart = {
     totalPrice: 0
 };
 
-export default (state = initialState, action: CartActionsType): InitialStateCart => {
+export default (state = initialState, action: CartActions): InitialStateCart => {
     switch(action.type) {
         case ADD_BOOK_TO_CART:
             return {
