@@ -24,7 +24,7 @@ const Profile: React.FC<ProfileFormProps> = ({
                         type="text" 
                         name="firstName" 
                         defaultValue={firstName} 
-                        ref={register({ required: true })} 
+                        ref={register} 
                         required
                     />
                     <label>Last Name</label>

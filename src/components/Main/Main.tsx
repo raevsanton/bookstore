@@ -19,11 +19,14 @@ import SwitchTheme from "../SwitchTheme/SwitchTheme";
 const Main: React.FC<MainProps> = ({
     books, 
     getBooks, 
+    sortBooks,
     booksInCart, 
     loadingBooks, 
     error, 
     firstName, 
-    lastName
+    lastName,
+    booksSorted,
+    selectedSort
 }) => {
     useEffect(() => {
         getBooks()
@@ -73,8 +76,19 @@ const Main: React.FC<MainProps> = ({
             </div>
             <div className="main__right">
                 <Switch>
-                    <Route path={'/'} exact> 
+                    <Route path={'/'} exact onUpdate={() => window.scrollTo(0, 0)}> 
                         <h1 className="main__title">My Library</h1>
+                        <select 
+                            name="main__sort" 
+                            className={`main__sort ${darkMode && "dark-select"}`} 
+                            onChange= {(e) => sortBooks(e.target.value, books, booksSorted)}
+                            data-bookSorted={booksSorted}
+                            value={selectedSort}
+                        >   
+                            <option hidden selected>Sort</option>
+                            <option value="0">Price high to low</option>
+                            <option value="1">Price low to high</option>
+                        </select>
                         <div className="main__list">
                             {books.map((book: Book) => (
                                 <Link to={`book/${book.id}`} key={book.id}>

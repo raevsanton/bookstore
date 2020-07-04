@@ -1,4 +1,4 @@
-import { getBooks } from "../actions/books";
+import { getBooks, sortBooks } from "../actions/books";
 import { connect } from "react-redux";
 import { AppStateType } from "../reducers";
 import { MapDispatchMainProps, MapStateMainProps } from "../components/Main/MainTypes";
@@ -10,11 +10,14 @@ const mapStateToProps = (store: AppStateType): MapStateMainProps => ({
     error: store.books.error,
     booksInCart: store.cart.booksInCart,
     firstName: store.profile.firstName,
-    lastName: store.profile.lastName
+    lastName: store.profile.lastName,
+    booksSorted: store.books.booksSorted,
+    selectedSort: store.books.selectedSort
 });
 
 const mapDispatchToProps: MapDispatchMainProps = {
-    getBooks
+    getBooks,
+    sortBooks
 };
 
 export default connect<MapStateMainProps, MapDispatchMainProps, {}, AppStateType>(

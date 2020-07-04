@@ -2,9 +2,11 @@ import {
     GET_BOOKS_ERROR,
     GET_BOOKS_REQUEST,
     GET_BOOKS_SUCCESS,
+    SORT_BOOKS,
     GetBooksErrorAction,
     GetBooksRequestAction,
     GetBooksSuccessAction,
+    SortBooksAction,
     BooksActions
 } from "./types";
 import axios from 'axios';
@@ -22,7 +24,6 @@ export const getBooksSuccess = (books: Array<Book>): GetBooksSuccessAction => ({
 export const getBooksError = (): GetBooksErrorAction => ({
     type: GET_BOOKS_ERROR
 });
-
 export const getBooks = (): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
         dispatch(getBooksRequest());
@@ -34,4 +35,11 @@ export const getBooks = (): ThunkAction<Promise<void>, AppStateType, unknown, Bo
         }
     }
 };
-
+export const sortBooks = (event: any, books: Array<Book>, booksSorted: boolean):  SortBooksAction => ({
+    type: SORT_BOOKS,
+    payload: {
+        event,
+        books,
+        booksSorted
+    }
+})
