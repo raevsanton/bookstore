@@ -33,9 +33,6 @@ main {
   &__right {
     width: 100%;
     margin-left: 40px;
-    h1 {
-      margin-bottom: 30px;
-    }
     @include md {
       margin-left: 0;
     }
@@ -125,9 +122,10 @@ main {
     }
   }
   &__title {
-    @include sm {
-      margin-top: 30px;
-    }
+    margin-bottom: 30px;
+  }
+  &__sort {
+    margin-bottom: 30px;
   }
 }
 

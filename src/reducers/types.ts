@@ -5,6 +5,8 @@ export interface InitialStateBooks {
     books: Array<Book>
     loadingBooks: boolean
     error: boolean
+    booksSorted: boolean
+    selectedSort: string
 }
 
 //Cart types

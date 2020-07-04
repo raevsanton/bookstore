@@ -7,8 +7,11 @@ export interface MapStateMainProps {
     error: boolean
     firstName: string
     lastName: string
+    booksSorted: boolean
+    selectedSort: string
 }
 export interface MapDispatchMainProps {
-    getBooks: () => void
+    getBooks: () => void,
+    sortBooks: (event: any, books: Array<Book>, booksSorted: boolean) => void
 }
 export type MainProps = MapStateMainProps & MapDispatchMainProps

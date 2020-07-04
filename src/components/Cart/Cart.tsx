@@ -16,15 +16,21 @@ const Cart: React.FC<CartProps> = ({
     return (
         <>
             <h1 className="main__title">Bookshelf</h1>
-            <div className={`bookpage ${darkMode && "dark-background"}`}>
+            <div className={`bookpage--cart ${darkMode && "dark-background"}`}>
                 {booksInCart.length === 0
                     ?   <div className="cart__empty">
                             <img src={emptyCart} alt="emptyCart"/>
                             <h2 className="cart__title--center">Is empty</h2>
                         </div>
                     :   <div className="cart__wrp">
+                            <div className="cart__total">
+                                <h3 className={`${darkMode && "dark-white"}`}>Total:</h3>
+                                <h2 className={`${darkMode && "dark-white"}`}>{`⠀${Math.ceil(totalPrice)}⠀`}</h2>
+                                <h4>{booksInCart[0].saleInfo.listPrice.currencyCode}</h4>
+                            </div>
                             {booksInCart.map((book : Book) =>
                                 <div key={book.id}>
+                                    <hr />
                                     <div className="cart__item" >
                                         <div className="cart__wrapper">
                                             <div className="cart__cover">
@@ -49,14 +55,8 @@ const Cart: React.FC<CartProps> = ({
                                             <img src={removeItem} alt="removeItem" />
                                         </div>
                                     </div>
-                                    <hr />
                                 </div>
                             )}
-                            <div className="cart__total">
-                                <h3 className={`${darkMode && "dark-white"}`}>Total:</h3>
-                                <h2 className={`${darkMode && "dark-white"}`}>{`⠀${Math.ceil(totalPrice)}⠀`}</h2>
-                                <h4>{booksInCart[0].saleInfo.listPrice.currencyCode}</h4>
-                            </div>
                         </div>
                 }
             </div>
