@@ -1,0 +1,841 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 10,
+    "items": [
+        {
+            "kind": "books#volume",
+            "id": "NPbkDwAAQBAJ",
+            "etag": "7r0sYnoNspk",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/NPbkDwAAQBAJ",
+            "volumeInfo": {
+                "title": "JavaScript: The Definitive Guide",
+                "subtitle": "Master the World's Most-Used Programming Language",
+                "authors": [
+                    "David Flanagan"
+                ],
+                "publisher": "\"O'Reilly Media, Inc.\"",
+                "publishedDate": "2020-05-14",
+                "description": "For web developers and other programmers interested in using JavaScript, this bestselling book provides the most comprehensive JavaScript material on the market. The seventh edition represents a significant update, with new information for ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781491951989"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1491951982"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 706,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.1.1.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=NPbkDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=NPbkDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=NPbkDwAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=NPbkDwAAQBAJ&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/JavaScript_The_Definitive_Guide.html?hl=&id=NPbkDwAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "3"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 20,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=NPbkDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "_i6bDeoCQzsC",
+            "etag": "mCx0Og+L4iE",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/_i6bDeoCQzsC",
+            "volumeInfo": {
+                "title": "Clean Code",
+                "subtitle": "A Handbook of Agile Software Craftsmanship",
+                "authors": [
+                    "Robert C. Martin"
+                ],
+                "publisher": "Pearson Education",
+                "publishedDate": "2008-08-01",
+                "description": "Even bad code can function. But if code isn’t clean, it can bring a development organization to its knees. Every year, countless hours and significant resources are lost because of poorly written code. But it doesn’t have to be that way. Noted ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780136083252"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0136083250"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 464,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "averageRating": 4.5,
+                "ratingsCount": 10,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "3.17.11.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=_i6bDeoCQzsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=_i6bDeoCQzsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=_i6bDeoCQzsC&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=_i6bDeoCQzsC&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Clean_Code.html?hl=&id=_i6bDeoCQzsC"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "19"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 20,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=_i6bDeoCQzsC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "eSIsAwAAQBAJ",
+            "etag": "Ist5BBL+B1s",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/eSIsAwAAQBAJ",
+            "volumeInfo": {
+                "title": "Head First JavaScript Programming",
+                "subtitle": "A Brain-Friendly Guide",
+                "authors": [
+                    "Eric Freeman",
+                    "Elisabeth Robson"
+                ],
+                "publisher": "\"O'Reilly Media, Inc.\"",
+                "publishedDate": "2014-03-26",
+                "description": "What will you learn from this book? This brain-friendly guide teaches you everything from JavaScript language fundamentals to advanced topics, including objects, functions, and the browser’s document object model. You won’t just be reading—you ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781449343989"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1449343988"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 704,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "3.7.9.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=eSIsAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=eSIsAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=eSIsAwAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=eSIsAwAAQBAJ&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Head_First_JavaScript_Programming.html?hl=&id=eSIsAwAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "14"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 12,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=eSIsAwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "fY-bAgAAQBAJ",
+            "etag": "DPgj4OuvYzA",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/fY-bAgAAQBAJ",
+            "volumeInfo": {
+                "title": "Java: The Complete Reference, Ninth Edition (INKLING CH)",
+                "authors": [
+                    "Herbert Schildt"
+                ],
+                "publisher": "McGraw Hill Professional",
+                "publishedDate": "2014-04-08",
+                "description": "The Definitive Java Programming Guide Fully updated for Java SE 8, Java: The Complete Reference, Ninth Edition explains how to develop, compile, debug, and run Java programs. Bestselling programming author Herb Schildt covers the entire Java ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780071808569"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0071808566"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 1312,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "averageRating": 3.5,
+                "ratingsCount": 3,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.3.5.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=fY-bAgAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=fY-bAgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=fY-bAgAAQBAJ&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=fY-bAgAAQBAJ&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Java_The_Complete_Reference_Ninth_Editio.html?hl=&id=fY-bAgAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "8"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 26,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=fY-bAgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "Fv1wRM_nIPIC",
+            "etag": "jYGAEl5Zfok",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/Fv1wRM_nIPIC",
+            "volumeInfo": {
+                "title": "AIR for Javascript Developers Pocket Guide",
+                "subtitle": "Getting Started with Adobe AIR",
+                "authors": [
+                    "Mike Chambers",
+                    "Daniel Dura",
+                    "Kevin Hoyt",
+                    "Dragos Georgita"
+                ],
+                "publisher": "\"O'Reilly Media, Inc.\"",
+                "publishedDate": "2008-04-18",
+                "description": "This book is the official guide to Adobe ® AIR[TM], written by members of the AIR team. With Adobe AIR, web developers can use technologies like HTML and JavaScript to build and deploy web applications to the desktop. Packed with examples, this ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1449379397"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781449379391"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 208,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "averageRating": 3,
+                "ratingsCount": 2,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.9.8.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=Fv1wRM_nIPIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=Fv1wRM_nIPIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=Fv1wRM_nIPIC&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=Fv1wRM_nIPIC&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/AIR_for_Javascript_Developers_Pocket_Gui.html?hl=&id=Fv1wRM_nIPIC"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "15"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 14,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=Fv1wRM_nIPIC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "FSVTDwAAQBAJ",
+            "etag": "k3YMMUGAp/0",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/FSVTDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Eloquent JavaScript, 3rd Edition",
+                "subtitle": "A Modern Introduction to Programming",
+                "authors": [
+                    "Marijn Haverbeke"
+                ],
+                "publisher": "No Starch Press",
+                "publishedDate": "2018-12-04",
+                "description": "Completely revised and updated, this best-selling introduction to programming in JavaScript focuses on writing real applications. JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781593279516"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1593279515"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 472,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=FSVTDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=FSVTDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=FSVTDwAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=FSVTDwAAQBAJ&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Eloquent_JavaScript_3rd_Edition.html?hl=&id=FSVTDwAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "4"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 25,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=FSVTDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "pvmjldfuwnQC",
+            "etag": "yvvU06yQRwg",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/pvmjldfuwnQC",
+            "volumeInfo": {
+                "title": "JavaScript & DHTML Cookbook",
+                "subtitle": "Solutions & Examples for Web Programmers",
+                "authors": [
+                    "Danny Goodman"
+                ],
+                "publisher": "\"O'Reilly Media, Inc.\"",
+                "publishedDate": "2007-08-08",
+                "description": "In today's Web 2.0 world, JavaScript and Dynamic HTML are at the center of the hot new approach to designing highly interactive pages on the client side. With this environment in mind, the new edition of this book offers bite-sized solutions to ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0596554958"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780596554958"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 606,
+                "printType": "BOOK",
+                "averageRating": 4,
+                "ratingsCount": 6,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.8.8.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=pvmjldfuwnQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=pvmjldfuwnQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=pvmjldfuwnQC&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=pvmjldfuwnQC&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/JavaScript_DHTML_Cookbook.html?hl=&id=pvmjldfuwnQC"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "19"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 21,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=pvmjldfuwnQC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "r10U16kgmkwC",
+            "etag": "gha/c9XJmtk",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/r10U16kgmkwC",
+            "volumeInfo": {
+                "title": "Object-Oriented Programming and Java",
+                "authors": [
+                    "Danny Poo",
+                    "Derek Kiong",
+                    "Swarnalatha Ashok"
+                ],
+                "publisher": "Springer Science & Business Media",
+                "publishedDate": "2007-09-07",
+                "description": "Covering the latest in Java technologies, Object-Oriented Programming and Java teaches the subject in a systematic, fundamentals-first approach. It begins with the description of real-world object interaction scenarios and explains how they can ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781846289637"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1846289637"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 322,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "averageRating": 4,
+                "ratingsCount": 2,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "3.3.10.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=r10U16kgmkwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=r10U16kgmkwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=r10U16kgmkwC&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=r10U16kgmkwC&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Object_Oriented_Programming_and_Java.html?hl=&id=r10U16kgmkwC"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "7"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 17,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Object_Oriented_Programming_and_Java-sample-epub.acsm?id=r10U16kgmkwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Object_Oriented_Programming_and_Java-sample-pdf.acsm?id=r10U16kgmkwC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=r10U16kgmkwC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "UAYvDwAAQBAJ",
+            "etag": "ZR3xFrOccAg",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/UAYvDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Eloquent JavaScript",
+                "subtitle": "A Modern Introduction to Programming",
+                "authors": [
+                    "Marijn Haverbeke"
+                ],
+                "publisher": "No Starch Press",
+                "publishedDate": "2011-01-15",
+                "description": "JavaScript is at the heart of almost every modern Web application, whether it's Google Apps, Twitter, or the newest browser-based game. Though it's simple for beginners to pick up and play with, JavaScript is not a toy—it's a flexible and ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781593272937"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1593272936"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 224,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "0.0.1.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=UAYvDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=UAYvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=UAYvDwAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=UAYvDwAAQBAJ&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Eloquent_JavaScript.html?hl=&id=UAYvDwAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "3"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 12,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=UAYvDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "XiWGDwAAQBAJ",
+            "etag": "7/soUQSFSyI",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/XiWGDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Advanced JavaScript",
+                "subtitle": "Speed up web development with the powerful features and benefits of JavaScript",
+                "authors": [
+                    "Zachary Shute"
+                ],
+                "publisher": "Packt Publishing Ltd",
+                "publishedDate": "2019-01-31",
+                "description": "Gain a deeper understanding of JavaScript and apply it to build small applications in backend, frontend, and mobile frameworks. Key Features Explore the new ES6 syntax, the event loop, and asynchronous programming Learn the test-driven ...",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781789803891"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1789803896"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 330,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "2.2.2.0.preview.3",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=XiWGDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=XiWGDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "previewLink": "http://books.google.com/books?id=XiWGDwAAQBAJ&printsec=frontcover&hl=&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=XiWGDwAAQBAJ&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Advanced_JavaScript.html?hl=&id=XiWGDwAAQBAJ"
+            },
+            "layerInfo": {
+                "layers": [
+                    {
+                        "layerId": "geo",
+                        "volumeAnnotationsVersion": "4"
+                    }
+                ]
+            },
+            "saleInfo": {
+                "country": "IL",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false,
+                "listPrice": {
+                    "amount": 22,
+                    "currencyCode": "$"
+                }
+            },
+            "accessInfo": {
+                "country": "IL",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": true
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=XiWGDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            }
+        }
+    ]
+}

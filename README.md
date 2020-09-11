@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://user-images.githubusercontent.com/32206164/84589665-cf725680-ae38-11ea-828b-b20eada43eae.png" alt="logo">
+    <img width="275" height="78" src="https://user-images.githubusercontent.com/32206164/84589665-cf725680-ae38-11ea-828b-b20eada43eae.png" alt="logo">
 </h1>
 
 <h4 align="center">:ledger: Project store for buying books</h4>

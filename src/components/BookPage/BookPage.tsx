@@ -14,7 +14,7 @@ const BookPage: React.FC<BookPageProps> = ({
     data, 
     booksInCart
 }) => {
-    let book = data.find((p : Book) => p.id === match.params.id);
+    let book = data.find((book : Book) => book.id === match.params.id);
     let isInCart=!!booksInCart.find((item: Book) =>
         item.id === book.id
     )
