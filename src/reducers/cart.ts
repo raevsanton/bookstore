@@ -22,7 +22,7 @@ export default (state = initialState, action: CartActions): InitialStateCart => 
         case REMOVE_BOOK_FROM_CART:
             return {
                 ...state,
-                booksInCart: state.booksInCart.filter((o: Book) => o.id !== action.payload.bookId),
+                booksInCart: state.booksInCart.filter((book: Book) => book.id !== action.payload.bookId),
                 totalPrice: state.totalPrice - action.payload.price
             };
         default:

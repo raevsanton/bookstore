@@ -28,14 +28,14 @@ export const getBooks = (): ThunkAction<Promise<void>, AppStateType, unknown, Bo
     return async (dispatch) => {
         dispatch(getBooksRequest());
         try {
-            const response = await axios.get('https://www.googleapis.com/books/v1/users/101983073010739360025/bookshelves/0/volumes?key=AIzaSyBsLrsbq-KGRM4L4qtmZmbL9ktttAEexh4');
+            const response = await axios.get('./data.json');
             dispatch(getBooksSuccess(response.data.items))
         } catch(error) {
             dispatch(getBooksError())
         }
     }
 };
-export const sortBooks = (event: any, books: Array<Book>, booksSorted: boolean):  SortBooksAction => ({
+export const sortBooks = (event: string, books: Array<Book>, booksSorted: boolean):  SortBooksAction => ({
     type: SORT_BOOKS,
     payload: {
         event,
