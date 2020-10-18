@@ -28,7 +28,7 @@ export const getBooks = (): ThunkAction<Promise<void>, AppStateType, unknown, Bo
     return async (dispatch) => {
         dispatch(getBooksRequest());
         try {
-            const response = await axios.get('./data.json');
+            const response = await axios.get('https://www.googleapis.com/books/v1/users/101983073010739360025/bookshelves/0/volumes?key=AIzaSyBsLrsbq-KGRM4L4qtmZmbL9ktttAEexh4');
             dispatch(getBooksSuccess(response.data.items))
         } catch(error) {
             dispatch(getBooksError())
