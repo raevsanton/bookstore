@@ -1,0 +1,58 @@
+version: '3.8'
+
+services: 
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: bookstore_frontend
+    restart: unless-stopped
+    command: serve -s build -l 3000
+    networks: 
+      - bookstore_network
+      
+  api: 
+    build: ./api
+    container_name: bookstore_api
+    restart: unless-stopped
+    command: npm run start
+    environment:
+      - PORT=8080
+      - POSTGRES_URL=postgresql://postgres:postgres@db:5432/bookstore
+    depends_on: 
+      - db
+    networks: 
+      - bookstore_network
+      
+  db:
+    image: postgres:13-alpine
+    container_name: bookstore_database
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=bookstore
+    volumes: 
+      - postgres_data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    networks: 
+      - bookstore_network
+  
+  nginx:
+    image: nginx:stable-alpine
+    container_name: bookstore_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf.prod:/etc/nginx/conf.d/nginx.conf
+    depends_on:
+      - frontend
+      - api
+    networks: 
+      - bookstore_network
+
+volumes:
+  postgres_data:
+
+networks:
+  bookstore_network:
+    driver: bridge

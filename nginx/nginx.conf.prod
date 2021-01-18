@@ -1,0 +1,14 @@
+server {
+  listen 80;
+
+  server_name bookstore-test.com;
+
+  location / {
+    proxy_pass http://frontend:3000;
+  }
+
+  location /api {
+    proxy_pass http://api:8080;
+    rewrite ^/api/(.*) /$1 break;
+  }
+}
