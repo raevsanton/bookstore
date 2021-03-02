@@ -1,0 +1,6 @@
+{
+    "verbose": false,
+    "ext": "ts,json",
+    "watch": ["src"],
+    "exec": "ts-node src/index.ts"
+}

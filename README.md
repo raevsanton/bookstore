@@ -3,22 +3,29 @@
 </h1>
 
 <h4 align="center">:ledger: Project store for buying books</h4>
+<h3 align="center">PERN Stack</h4>
 
-## Stack Technologies
-
-- React
-- Redux
-- Redux-Thunk
-- React-Router
-- React-hook-form
-- TypeScript
-- Axios
-- SCSS
-- Classnames
+- React (Redux)
+- Node.js (Express)
+- PostgreSQL
+- nginx
+- Docker
 
 ## Installation
 
-```bash
-yarn install
-yarn start
-```
+1)  
+    ```bash
+    git clone https://github.com/raevsanton/bookstore.git
+    ```
+2. 
+   ```bash
+    cd bookstore
+    ```
+3.
+    ```bash
+    docker-compose up --build
+    ```
+4.  
+    ```bash
+    http://localhost:8080
+    ```
