@@ -1,58 +1,68 @@
-version: '3.8'
+version: '3.9'
 
-services: 
-  frontend:
+services:
+  server:
+    restart: always
     build:
-      context: ./frontend
-      dockerfile: Dockerfile.prod
-    container_name: bookstore_frontend
-    restart: unless-stopped
-    command: serve -s build -l 3000
-    networks: 
-      - bookstore_network
-      
-  api: 
-    build: ./api
-    container_name: bookstore_api
-    restart: unless-stopped
-    command: npm run start
+      context: ./server
+      dockerfile: Dockerfile.dev
+    container_name: bookstore_server
+    volumes:
+      - /app/node_modules
+      - ./server:/app
     environment:
-      - PORT=8080
       - POSTGRES_URL=postgresql://postgres:postgres@db:5432/bookstore
-    depends_on: 
+    depends_on:
       - db
-    networks: 
+    networks:
       - bookstore_network
-      
+
   db:
     image: postgres:13-alpine
-    container_name: bookstore_database
+    restart: always
+    container_name: bookstore_db
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=bookstore
-    volumes: 
-      - postgres_data:/var/lib/postgresql/data
-      - ./migrations:/docker-entrypoint-initdb.d
-    networks: 
-      - bookstore_network
-  
-  nginx:
-    image: nginx:stable-alpine
-    container_name: bookstore_nginx
-    ports:
-      - "80:80"
     volumes:
-      - ./nginx/nginx.conf.prod:/etc/nginx/conf.d/nginx.conf
-    depends_on:
-      - frontend
-      - api
-    networks: 
+      - postgres-data:/var/lib/postgresql/data
+      - ./migrations:/docker-entrypoint-initdb.d
+    networks:
       - bookstore_network
 
-volumes:
-  postgres_data:
+  client:
+    restart: always
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    container_name: bookstore_client
+    volumes:
+      - ./app/node_modules
+      - ./client:/app
+    depends_on:
+      - server
+    networks:
+      - bookstore_network
+
+  nginx:
+    restart: always
+    depends_on:
+      - server
+      - client
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.dev
+    container_name: bookstore_nginx
+    ports:
+      - 8080:80
+    networks:
+      - bookstore_network
 
 networks:
   bookstore_network:
     driver: bridge
+
+volumes:
+  postgres-data:
+    driver: local
