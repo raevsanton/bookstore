@@ -19,7 +19,7 @@ const BookPage: React.FC<BookPageProps> = ({
 }) => {
     let isInCart=!!booksInCart.find((item: Book) =>
         item.id === oneBook.id
-    )
+    );
     let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
     
     useEffect(() => {
