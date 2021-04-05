@@ -30,7 +30,7 @@ const Main: React.FC<MainProps> = ({
 }) => {
     useEffect(() => {
         getAllBooks()
-    }, [getAllBooks]);
+    }, []);
 
     let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
     darkMode ? document.body.className = 'dark' : document.body.className = '';
