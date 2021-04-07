@@ -26,7 +26,7 @@ const Main: React.FC<MainProps> = ({
 
     React.useEffect(() => {
         getAllBooks()
-    }, [getAllBooks]);
+    }, []);
 
     if (loadingBooks) {
         return <Preloader/>
