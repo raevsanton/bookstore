@@ -1,8 +1,8 @@
-import {Book} from "../types/types";
+import { Book } from "../../types/types";
 
 //Books types
 export interface InitialStateBooks {
-    books: Array<Book>
+    books: Book[]
     oneBook: any
     loadingBooks: boolean
     error: boolean
@@ -12,7 +12,7 @@ export interface InitialStateBooks {
 
 //Cart types
 export interface InitialStateCart {
-    booksInCart: Array<Book>
+    booksInCart: Book[]
     totalPrice: number
 }
 

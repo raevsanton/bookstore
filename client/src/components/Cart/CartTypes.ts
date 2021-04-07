@@ -2,7 +2,7 @@ import {Book} from "../../types/types";
 
 export interface MapStateCartProps {
     totalPrice: number
-    booksInCart: Array<Book>
+    booksInCart: Book[]
 }
 
 export interface MapDispatchCartProps {

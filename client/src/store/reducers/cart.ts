@@ -3,7 +3,7 @@ import {
     REMOVE_BOOK_FROM_CART,
     CartActions
 } from "../actions/types";
-import {Book} from "../types/types";
+import {Book} from "../../types/types";
 import {InitialStateCart} from "./types";
 
 const initialState: InitialStateCart = {

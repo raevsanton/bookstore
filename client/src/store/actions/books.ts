@@ -12,14 +12,14 @@ import {
     GetOneBookSuccessAction,
 } from "./types";
 import axios from 'axios';
-import { Book } from "../types/types";
+import { Book } from "../../types/types";
 import { ThunkAction } from "redux-thunk";
 import { AppStateType } from "../reducers";
 
 export const getBooksRequest = (): GetBooksRequestAction => ({
     type: GET_BOOKS_REQUEST
 });
-export const getBooksSuccess = (books: Array<Book>): GetBooksSuccessAction => ({
+export const getBooksSuccess = (books: Book[]): GetBooksSuccessAction => ({
     type: GET_BOOKS_SUCCESS,
     payload: books
 });
@@ -43,7 +43,7 @@ export const getAllBooks = (): ThunkAction<Promise<void>, AppStateType, unknown,
     }
 };
 
-export const getOneBookById = (id: number): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
+export const getOneBookById = (id: string | undefined): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
         // dispatch(getBooksRequest());
         try {
@@ -55,7 +55,7 @@ export const getOneBookById = (id: number): ThunkAction<Promise<void>, AppStateT
     }
 };
 
-export const sortBooks = (event: string, books: Array<Book>, booksSorted: boolean):  SortBooksAction => ({
+export const sortBooks = (event: string, books: Book[], booksSorted: boolean):  SortBooksAction => ({
     type: SORT_BOOKS,
     payload: {
         event,

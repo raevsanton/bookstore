@@ -1,7 +1,7 @@
-import {removeBookFromCart} from "../actions/cart";
+import {removeBookFromCart} from "../store/actions/cart";
 import {connect} from "react-redux";
 import Cart from "../components/Cart/Cart";
-import {AppStateType} from "../reducers";
+import {AppStateType} from "../store/reducers";
 import {MapDispatchCartProps, MapStateCartProps} from "../components/Cart/CartTypes";
 
 const mapStateToProps = (store: AppStateType): MapStateCartProps => ({

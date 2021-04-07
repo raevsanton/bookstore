@@ -11,14 +11,14 @@
 }
 
 body {
-  font-family: OpenSans-Regular;
+  font-family: OpenSans-Regular, serif;
   background: #f7f6f1;
   margin: 0 30px;
   color: #090b28;
 }
 
 h1, h2, h3, h4 {
-  font-family: YesevaOne-Regular;
+  font-family: YesevaOne-Regular, serif;
   font-weight: 500;
 }
 
@@ -27,7 +27,7 @@ a {
 }
 
 button {
-  font-family: OpenSans-Regular;
+  font-family: OpenSans-Regular, serif;
   transition: .5s ease-in-out;
   border-radius: 200px;
   border: none;

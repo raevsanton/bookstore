@@ -5,7 +5,7 @@ import { CartProps } from "./CartTypes";
 import emptyCart from "../../assets/images/empty-bookshelf.svg";
 import removeItem from "../../assets/images/close.svg";
 import { useSelector } from 'react-redux';
-import { AppStateType } from '../../reducers';
+import { AppStateType } from '../../store/reducers';
 
 const Cart: React.FC<CartProps> = ({
     removeBookFromCart,

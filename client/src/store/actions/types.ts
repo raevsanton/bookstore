@@ -1,4 +1,4 @@
-import {Book} from "../types/types";
+import {Book} from "../../types/types";
 
 //Constants
 export const ADD_BOOK_TO_CART = 'ADD_BOOK_TO_CART';
@@ -17,7 +17,7 @@ export interface GetBooksRequestAction {
 }
 export interface GetBooksSuccessAction {
     type: typeof GET_BOOKS_SUCCESS
-    payload: Array<Book>
+    payload: Book[]
 }
 export interface GetBooksErrorAction {
     type: typeof GET_BOOKS_ERROR
@@ -30,7 +30,7 @@ export interface SortBooksAction {
     type: typeof SORT_BOOKS,
     payload: {
         event: string
-        books: Array<Book>
+        books: Book[]
         booksSorted: boolean
     }
 }

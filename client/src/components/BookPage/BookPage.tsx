@@ -1,30 +1,32 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./bookPage.scss";
 import { Book } from '../../types/types';
-import { BookPageProps } from "./BookPageTypes";
+import { useRouteMatch } from "react-router-dom";
+import {BookPageProps, MatchParamsBookPage} from "./BookPageTypes";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux';
-import { AppStateType } from '../../reducers';
+import { AppStateType } from '../../store/reducers';
 import Preloader from "../Preloader/Preloader";
 
 const BookPage: React.FC<BookPageProps> = ({
     addBookToCart,
     removeBookFromCart,
-    getOneBookById, 
-    match,
+    getOneBookById,
     booksInCart,
     loadingBooks,
     oneBook,
 }) => {
-    let isInCart=!!booksInCart.find((item: Book) =>
+    const isInCart=!!booksInCart.find((item: Book) =>
         item.id === oneBook.id
     );
-    let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
-    
-    useEffect(() => {
-        getOneBookById(match.params.id);
-    }, [getOneBookById, match.params.id]);
+    const darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
+    const match = useRouteMatch<MatchParamsBookPage>("/book/:id");
+    const bookId = match?.params.id;
+
+    React.useEffect(() => {
+        getOneBookById(bookId);
+    }, [bookId, getOneBookById]);
 
     if (loadingBooks) {
         return <Preloader/>
