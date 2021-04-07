@@ -1,41 +1,32 @@
 @import "../../styles/mixins.scss";
 
 main {
-  display: flex;
-  margin-top: 50px;
-  @include xl {
-    justify-content: space-around;
-  }
+  width: 100%;
+  margin-left: 40px;
   @include md {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
+    margin-left: 0;
   }
 }
 
 .main {
+  &__content {
+    display: flex;
+    margin-top: 50px;
+    @include xl {
+      justify-content: space-around;
+    }
+    @include md {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
   &__error {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-  }
-  &__left {
-    width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include md {
-      width: 100%;
-    }
-  }
-  &__right {
-    width: 100%;
-    margin-left: 40px;
-    @include md {
-      margin-left: 0;
-    }
   }
   &__face {
     width: 90px;

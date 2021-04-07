@@ -3,15 +3,19 @@ import { render } from 'react-dom';
 import './styles/index.scss';
 import { Provider } from "react-redux";
 import { applyMiddleware, compose, createStore } from "redux";
-import { rootReducer } from "./reducers";
+import { rootReducer } from "./store/reducers";
 import { BrowserRouter } from "react-router-dom";
 import { loadState, saveState } from "./utils/localStorage";
 import thunk from "redux-thunk";
-import App from "./components/App";
+import App from "./App";
 
-const composeEnhancers =
-    // @ts-ignore
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
+declare global {
+    interface Window {
+        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
+    }
+}
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(
     applyMiddleware(thunk)

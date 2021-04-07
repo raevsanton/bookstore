@@ -4,7 +4,7 @@ import {
     AddBookToCartAction,
     RemoveBookFromCartAction
 } from "./types";
-import {Book} from "../types/types";
+import {Book} from "../../types/types";
 
 export const addBookToCart = (book: Book): AddBookToCartAction => ({
     type: ADD_BOOK_TO_CART,

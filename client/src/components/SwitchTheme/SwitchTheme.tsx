@@ -1,8 +1,8 @@
 import React from "react";
 import "./switchTheme.scss";
 import { useSelector, useDispatch } from "react-redux";
-import { AppStateType } from "../../reducers";
-import { switchTheme } from "../../actions/theme";
+import { AppStateType } from "../../store/reducers";
+import { switchTheme } from "../../store/actions/theme";
 
 const SwitchTheme = () => {
   const dispatch = useDispatch();

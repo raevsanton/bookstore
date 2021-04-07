@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+
+aside {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include md {
+    width: 100%;
+  }
+}

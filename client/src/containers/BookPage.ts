@@ -1,13 +1,12 @@
 import { connect } from "react-redux";
-import { addBookToCart, removeBookFromCart } from "../actions/cart";
+import { addBookToCart, removeBookFromCart } from "../store/actions/cart";
 import BookPage from "../components/BookPage/BookPage";
-import { AppStateType } from "../reducers";
+import { AppStateType } from "../store/reducers";
 import {
     MapDispatchBookPageProps,
-    OwnBookPageProps,
     MapStateToPropsBookPage
 } from "../components/BookPage/BookPageTypes";
-import { getOneBookById } from "../actions/books";
+import { getOneBookById } from "../store/actions/books";
 
 const mapStateToProps = (store: AppStateType): MapStateToPropsBookPage => ({
     booksInCart: store.cart.booksInCart,
@@ -21,7 +20,7 @@ const mapDispatchToProps: MapDispatchBookPageProps = {
     getOneBookById,
 };
 
-export default connect<MapStateToPropsBookPage, MapDispatchBookPageProps, OwnBookPageProps, AppStateType>(
+export default connect<MapStateToPropsBookPage, MapDispatchBookPageProps, {}, AppStateType>(
     mapStateToProps,
     mapDispatchToProps
 )(BookPage);
