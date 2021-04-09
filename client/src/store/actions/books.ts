@@ -2,12 +2,10 @@ import {
     GET_BOOKS_ERROR,
     GET_BOOKS_REQUEST,
     GET_BOOKS_SUCCESS,
-    SORT_BOOKS,
     GET_ONE_BOOK_SUCCESS,
     GetBooksErrorAction,
     GetBooksRequestAction,
     GetBooksSuccessAction,
-    SortBooksAction,
     BooksActions,
     GetOneBookSuccessAction,
 } from "./types";
@@ -45,7 +43,6 @@ export const getAllBooks = (): ThunkAction<Promise<void>, AppStateType, unknown,
 
 export const getOneBookById = (id: string | undefined): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
-        // dispatch(getBooksRequest());
         try {
             const response = await axios.get(`/api/v1/book/${id}`);
             dispatch(getOneBookSuccess(response.data))
@@ -55,11 +52,16 @@ export const getOneBookById = (id: string | undefined): ThunkAction<Promise<void
     }
 };
 
-export const sortBooks = (event: string, books: Book[], booksSorted: boolean):  SortBooksAction => ({
-    type: SORT_BOOKS,
-    payload: {
-        event,
-        books,
-        booksSorted
+export const sortBooks = (event: string): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
+    return async (dispatch) => {
+        dispatch(getBooksRequest());
+        try {
+            const response = await axios.post(`/api/v1/books/sort`, {
+                "sort": event
+            });
+            dispatch(getBooksSuccess(response.data))
+        } catch(error) {
+            dispatch(getBooksError())
+        }
     }
-})
+};

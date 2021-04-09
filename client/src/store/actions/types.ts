@@ -30,8 +30,6 @@ export interface SortBooksAction {
     type: typeof SORT_BOOKS,
     payload: {
         event: string
-        books: Book[]
-        booksSorted: boolean
     }
 }
 export type BooksActions = GetBooksRequestAction

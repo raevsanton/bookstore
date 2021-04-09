@@ -12,6 +12,7 @@ const mapStateToProps = (store: AppStateType): MapStateToPropsBookPage => ({
     booksInCart: store.cart.booksInCart,
     oneBook: store.books.oneBook,
     loadingBooks: store.books.loadingBooks,
+    darkMode: store.darkMode.darkMode,
 })
 
 const mapDispatchToProps: MapDispatchBookPageProps = {

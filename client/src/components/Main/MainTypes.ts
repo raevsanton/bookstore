@@ -4,11 +4,12 @@ export interface MapStateMainProps {
     books: Book[]
     loadingBooks: boolean
     error: boolean
-    booksSorted: boolean
-    selectedSort: string
+    darkMode: boolean
 }
+
 export interface MapDispatchMainProps {
     getAllBooks: () => void,
-    sortBooks: (event: string, books: Book[], booksSorted: boolean) => void
+    sortBooks: (event: string) => void
 }
+
 export type MainProps = MapStateMainProps & MapDispatchMainProps

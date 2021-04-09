@@ -5,8 +5,6 @@ import { useRouteMatch } from "react-router-dom";
 import {BookPageProps, MatchParamsBookPage} from "./BookPageTypes";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
-import { useSelector } from 'react-redux';
-import { AppStateType } from '../../store/reducers';
 import Preloader from "../Preloader/Preloader";
 
 const BookPage: React.FC<BookPageProps> = ({
@@ -16,11 +14,11 @@ const BookPage: React.FC<BookPageProps> = ({
     booksInCart,
     loadingBooks,
     oneBook,
+    darkMode,
 }) => {
     const isInCart=!!booksInCart.find((item: Book) =>
         item.id === oneBook.id
     );
-    const darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
     const match = useRouteMatch<MatchParamsBookPage>("/book/:id");
     const bookId = match?.params.id;
 

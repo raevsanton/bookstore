@@ -5,17 +5,14 @@ import face from "../../assets/images/face.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook, faBookmark } from "@fortawesome/free-solid-svg-icons";
 import SwitchTheme from "../SwitchTheme/SwitchTheme";
-import { useSelector } from "react-redux";
-import { AppStateType } from "../../store/reducers";
 import { AsideProps } from "./AsideTypes";
 
 const Aside: React.FC<AsideProps> = ({
     booksInCart,
     firstName,
-    lastName
+    lastName,
+    darkMode,
 }) => {
-    const darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
-    darkMode ? document.body.className = 'dark' : document.body.className = '';
     return (
         <aside>
             <Link to="/profile">

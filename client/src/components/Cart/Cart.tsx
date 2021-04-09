@@ -4,15 +4,13 @@ import { Book } from "../../types/types";
 import { CartProps } from "./CartTypes";
 import emptyCart from "../../assets/images/empty-bookshelf.svg";
 import removeItem from "../../assets/images/close.svg";
-import { useSelector } from 'react-redux';
-import { AppStateType } from '../../store/reducers';
 
 const Cart: React.FC<CartProps> = ({
     removeBookFromCart,
     totalPrice,
-    booksInCart
+    booksInCart,
+    darkMode,
 }) => {
-    let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
     return (
         <>
             <h1 className="main__title">Bookshelf</h1>

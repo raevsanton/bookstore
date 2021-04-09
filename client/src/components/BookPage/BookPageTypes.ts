@@ -4,6 +4,7 @@ export interface MapStateToPropsBookPage {
     booksInCart: Book[]
     oneBook: Book
     loadingBooks: boolean
+    darkMode: boolean
 }
 
 export interface MapDispatchBookPageProps {
