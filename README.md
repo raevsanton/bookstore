@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">:ledger: Project store for buying books</h4>
-<h3 align="center">PERN Stack</h4>
+<h3 align="center">PERN Stack App</h4>
 
 - React (Redux)
 - Node.js (Express)

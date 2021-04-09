@@ -11,7 +11,7 @@ const Profile: React.FC<ProfileFormProps> = ({
 }) => {
     const { register, handleSubmit } = useForm<ProfileFormProps>();
     const dispatch = useDispatch();
-    let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
+    let darkMode = useSelector((state: AppStateType) => state.darkMode.darkMode);
     const onSubmit = (data: ProfileFormProps) => dispatch(changeName(data.firstName, data.lastName));
     return (
         <>

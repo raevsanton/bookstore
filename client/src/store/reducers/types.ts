@@ -6,8 +6,6 @@ export interface InitialStateBooks {
     oneBook: any
     loadingBooks: boolean
     error: boolean
-    booksSorted: boolean
-    selectedSort: string
 }
 
 //Cart types

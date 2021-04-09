@@ -8,8 +8,7 @@ const mapStateToProps = (store: AppStateType): MapStateMainProps => ({
     books: store.books.books,
     loadingBooks: store.books.loadingBooks,
     error: store.books.error,
-    booksSorted: store.books.booksSorted,
-    selectedSort: store.books.selectedSort
+    darkMode: store.darkMode.darkMode
 });
 
 const mapDispatchToProps: MapDispatchMainProps = {

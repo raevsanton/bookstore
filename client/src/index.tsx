@@ -33,7 +33,7 @@ store.subscribe(() => {
   saveState({
     profile: store.getState().profile,
     cart: store.getState().cart,
-    theme: store.getState().theme
+    darkMode: store.getState().darkMode
   });
 });
 

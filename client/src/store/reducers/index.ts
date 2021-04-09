@@ -2,13 +2,13 @@ import { combineReducers } from "redux";
 import { cartReducer } from "./cart";
 import { booksReducer } from "./books";
 import { profileReducer } from "./profile";
-import { themeReducer } from "./theme";
+import { darkModeReducer } from "./darkMode";
 
 export const rootReducer = combineReducers({
     cart: cartReducer,
     books: booksReducer,
     profile: profileReducer,
-    theme: themeReducer
+    darkMode: darkModeReducer
 });
 
 type RootReducerType = typeof rootReducer;

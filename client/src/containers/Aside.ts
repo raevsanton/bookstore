@@ -7,6 +7,7 @@ const mapStateToProps = (store: AppStateType): MapStateToPropsAside => ({
     booksInCart: store.cart.booksInCart,
     firstName: store.profile.firstName,
     lastName: store.profile.lastName,
+    darkMode: store.darkMode.darkMode,
 })
 
 export default connect<MapStateToPropsAside, {}, {}, AppStateType>(

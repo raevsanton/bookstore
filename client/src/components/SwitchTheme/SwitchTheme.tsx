@@ -6,7 +6,7 @@ import { switchTheme } from "../../store/actions/theme";
 
 const SwitchTheme = () => {
   const dispatch = useDispatch();
-  let darkMode = useSelector((state: AppStateType) => state.theme.darkMode);
+  let darkMode = useSelector((state: AppStateType) => state.darkMode.darkMode);
   return (
     <div className="switch" onClick={() => dispatch(switchTheme(!darkMode))}>
         <button className={`switch__line ${darkMode && "on-line"}`} />

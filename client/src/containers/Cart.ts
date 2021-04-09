@@ -6,7 +6,8 @@ import {MapDispatchCartProps, MapStateCartProps} from "../components/Cart/CartTy
 
 const mapStateToProps = (store: AppStateType): MapStateCartProps => ({
     totalPrice: store.cart.totalPrice,
-    booksInCart: store.cart.booksInCart
+    booksInCart: store.cart.booksInCart,
+    darkMode: store.darkMode.darkMode,
 });
 
 const mapDispatchToProps: MapDispatchCartProps = {

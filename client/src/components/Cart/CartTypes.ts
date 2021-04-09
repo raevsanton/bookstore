@@ -1,8 +1,9 @@
-import {Book} from "../../types/types";
+import { Book } from "../../types/types";
 
 export interface MapStateCartProps {
     totalPrice: number
     booksInCart: Book[]
+    darkMode: boolean
 }
 
 export interface MapDispatchCartProps {
