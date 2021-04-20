@@ -7,12 +7,12 @@ class BookController {
         res.json(books.rows)
     }
     async getOneBookById(req: express.Request, res: express.Response) {
-        const id = req.params.id
+        const { id } = req.params
         const book = await pool.query('SELECT * FROM book where id = $1', [id])
         res.json(book.rows[0])
     }
     async getSortedBooks(req: express.Request, res: express.Response) {
-        const sort = req.body.sort
+        const { sort } = req.body
         let books;
         switch(sort) {
             case 'price-desc':
