@@ -14,7 +14,7 @@ export interface MapDispatchBookPageProps {
 }
 
 export interface MatchParamsBookPage {
-    id: string | undefined
+    id: string
 }
 
 export type BookPageProps = MapDispatchBookPageProps & MapStateToPropsBookPage

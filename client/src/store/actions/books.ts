@@ -14,6 +14,8 @@ import { Book } from "../../types/types";
 import { ThunkAction } from "redux-thunk";
 import { AppStateType } from "../reducers";
 
+const BASE_URL = '/api/v1'
+
 export const getBooksRequest = (): GetBooksRequestAction => ({
     type: GET_BOOKS_REQUEST
 });
@@ -33,7 +35,7 @@ export const getAllBooks = (): ThunkAction<Promise<void>, AppStateType, unknown,
     return async (dispatch) => {
         dispatch(getBooksRequest());
         try {
-            const response = await axios.get('/api/v1/books');
+            const response = await axios.get(`${BASE_URL}/books`);
             dispatch(getBooksSuccess(response.data))
         } catch(error) {
             dispatch(getBooksError())
@@ -43,8 +45,9 @@ export const getAllBooks = (): ThunkAction<Promise<void>, AppStateType, unknown,
 
 export const getOneBookById = (id: string | undefined): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
+        dispatch(getBooksRequest());
         try {
-            const response = await axios.get(`/api/v1/book/${id}`);
+            const response = await axios.get(`${BASE_URL}/book/${id}`);
             dispatch(getOneBookSuccess(response.data))
         } catch(error) {
             dispatch(getBooksError())
@@ -56,7 +59,7 @@ export const sortBooks = (event: string): ThunkAction<Promise<void>, AppStateTyp
     return async (dispatch) => {
         dispatch(getBooksRequest());
         try {
-            const response = await axios.post(`/api/v1/books/sort`, {
+            const response = await axios.post(`${BASE_URL}/books/sort`, {
                 "sort": event
             });
             dispatch(getBooksSuccess(response.data))

@@ -3,8 +3,8 @@ import './preloader.scss';
 
 const Preloader = () => {
     return (
-        <div className="loadingio-spinner-ripple-bxrypf1o265">
-            <div className="ldio-9y2wbp33iuk">
+        <div className="preloader">
+            <div className="preloader__wrapper">
                 <div/>
                 <div/>
             </div>
