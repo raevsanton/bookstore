@@ -1,8 +1,8 @@
 import React from 'react';
 import "./bookPage.scss";
 import { Book } from '../../types/types';
-import { useRouteMatch } from "react-router-dom";
-import {BookPageProps, MatchParamsBookPage} from "./BookPageTypes";
+import { useParams } from "react-router-dom";
+import { BookPageProps, MatchParamsBookPage } from "./BookPageTypes";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import Preloader from "../Preloader/Preloader";
@@ -19,12 +19,12 @@ const BookPage: React.FC<BookPageProps> = ({
     const isInCart=!!booksInCart.find((item: Book) =>
         item.id === oneBook.id
     );
-    const match = useRouteMatch<MatchParamsBookPage>("/book/:id");
-    const bookId = match?.params.id;
+
+    const params = useParams<MatchParamsBookPage>();
 
     React.useEffect(() => {
-        getOneBookById(bookId);
-    }, [bookId, getOneBookById]);
+        getOneBookById(params.id);
+    }, [params.id, getOneBookById]);
 
     if (loadingBooks) {
         return <Preloader/>
