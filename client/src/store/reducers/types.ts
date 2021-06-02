@@ -3,9 +3,9 @@ import { Book } from "../../types/types";
 //Books types
 export interface InitialStateBooks {
     books: Book[]
-    oneBook: any
-    loadingBooks: boolean
-    error: boolean
+    book: Book | null
+    isLoading: boolean
+    isError: boolean
 }
 
 //Cart types

@@ -1,30 +1,24 @@
-import {Book} from "../../types/types";
+import { Book } from "../../types/types";
 
 //Constants
 export const ADD_BOOK_TO_CART = 'ADD_BOOK_TO_CART';
 export const REMOVE_BOOK_FROM_CART = 'REMOVE_BOOK_FROM_CART';
-export const GET_BOOKS_SUCCESS = 'GET_BOOKS_SUCCESS';
-export const GET_BOOKS_REQUEST = 'GET_BOOKS_REQUEST';
-export const GET_BOOKS_ERROR = 'GET_BOOKS_ERROR';
-export const GET_ONE_BOOK_SUCCESS = 'GET_ONE_BOOK_SUCCESS';
+export const LOADING_SUCCESS = 'LOADING_SUCCESS';
+export const LOADING_REQUEST = 'LOADING_REQUEST';
+export const LOADING_ERROR = 'LOADING_ERROR';
 export const CHANGE_NAME = 'CHANGE_NAME';
 export const SWITCH_THEME = 'SWITCH_THEME'
 export const SORT_BOOKS = 'SORT_BOOKS';
 
-//Books types
-export interface GetBooksRequestAction {
-    type: typeof GET_BOOKS_REQUEST
+//Loading types
+export interface LoadingRequestAction {
+    type: typeof LOADING_REQUEST
 }
-export interface GetBooksSuccessAction {
-    type: typeof GET_BOOKS_SUCCESS
-    payload: Book[]
+export interface LoadingSuccessAction {
+    type: typeof LOADING_SUCCESS
 }
-export interface GetBooksErrorAction {
-    type: typeof GET_BOOKS_ERROR
-}
-export interface GetOneBookSuccessAction {
-    type: typeof GET_ONE_BOOK_SUCCESS
-    payload: Book
+export interface LoadingErrorAction {
+    type: typeof LOADING_ERROR
 }
 export interface SortBooksAction {
     type: typeof SORT_BOOKS,
@@ -32,10 +26,9 @@ export interface SortBooksAction {
         event: string
     }
 }
-export type BooksActions = GetBooksRequestAction
-    | GetBooksSuccessAction
-    | GetBooksErrorAction
-    | GetOneBookSuccessAction
+export type LoadingActions = LoadingRequestAction
+    | LoadingSuccessAction
+    | LoadingErrorAction
     | SortBooksAction
 
 //Cart types

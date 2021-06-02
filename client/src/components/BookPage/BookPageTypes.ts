@@ -1,16 +1,16 @@
 import { Book } from "../../types/types";
 
 export interface MapStateToPropsBookPage {
-    booksInCart: Book[]
-    oneBook: Book
-    loadingBooks: boolean
+    books: Book[]
+    book: Book | null
     darkMode: boolean
+    isLoading: boolean
+    isError: boolean
 }
 
 export interface MapDispatchBookPageProps {
-    addBookToCart: (book : Book) => void
-    removeBookFromCart: (id: string, amount: number) => void
-    getOneBookById: (id: string | undefined) => Object
+    getOneBook: (id: string) => void
+    removeOneBook: (id: string) => void
 }
 
 export interface MatchParamsBookPage {

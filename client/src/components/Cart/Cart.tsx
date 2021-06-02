@@ -13,7 +13,7 @@ const Cart: React.FC<CartProps> = ({
 }) => {
     return (
         <>
-            <h1 className="main__title">Bookshelf</h1>
+            <h1 className="main__title">Cart</h1>
             <div className={`bookpage--cart ${darkMode && "dark-background"}`}>
                 {booksInCart.length === 0
                     ?   <div className="cart__empty">

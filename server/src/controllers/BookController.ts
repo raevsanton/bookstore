@@ -24,6 +24,11 @@ class BookController {
         }
         res.json(books?.rows)
     }
+    async deleteOneBookById(req: express.Request, res: express.Response) {
+        const { id } = req.params
+        const book = await pool.query('DELETE FROM book where id = $1', [id])
+        res.json(book.rows[0])
+    }
 }
 
 export default new BookController()

@@ -1,24 +1,24 @@
+import { getOneBook } from './../store/actions/books';
+import { removeOneBook } from '../store/actions/books';
 import { connect } from "react-redux";
-import { addBookToCart, removeBookFromCart } from "../store/actions/cart";
 import BookPage from "../components/BookPage/BookPage";
 import { AppStateType } from "../store/reducers";
 import {
     MapDispatchBookPageProps,
     MapStateToPropsBookPage
 } from "../components/BookPage/BookPageTypes";
-import { getOneBookById } from "../store/actions/books";
 
 const mapStateToProps = (store: AppStateType): MapStateToPropsBookPage => ({
-    booksInCart: store.cart.booksInCart,
-    oneBook: store.books.oneBook,
-    loadingBooks: store.books.loadingBooks,
+    books: store.books.books,
+    book: store.books.book,
     darkMode: store.darkMode.darkMode,
+    isError: store.books.isError,
+    isLoading: store.books.isLoading
 })
 
 const mapDispatchToProps: MapDispatchBookPageProps = {
-    addBookToCart,
-    removeBookFromCart,
-    getOneBookById,
+    removeOneBook,
+    getOneBook
 };
 
 export default connect<MapStateToPropsBookPage, MapDispatchBookPageProps, {}, AppStateType>(

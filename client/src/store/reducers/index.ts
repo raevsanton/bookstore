@@ -1,3 +1,4 @@
+import { loadingReducer } from './loading';
 import { combineReducers } from "redux";
 import { cartReducer } from "./cart";
 import { booksReducer } from "./books";
@@ -8,7 +9,8 @@ export const rootReducer = combineReducers({
     cart: cartReducer,
     books: booksReducer,
     profile: profileReducer,
-    darkMode: darkModeReducer
+    darkMode: darkModeReducer,
+    loading: loadingReducer
 });
 
 type RootReducerType = typeof rootReducer;

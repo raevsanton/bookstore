@@ -22,6 +22,7 @@ main {
     }
   }
   &__error {
+    margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -105,7 +106,7 @@ main {
       transition: all 0.4s ease 0s;
       color: #fff;
       background-color: #1f4d8f;
-      box-shadow: 0 24px 24px -12px hsla(215, 64%, 34%, 0.4);
+      box-shadow: 0 18px 24px -12px hsla(215, 64%, 34%, 0.4);
       .fa-book, .fa-bookmark, .fa-question-circle {
         color: #fff;
         transition: all 0.4s ease 0s;
@@ -117,6 +118,13 @@ main {
   }
   &__sort {
     margin-bottom: 30px;
+  }
+  &__remove {
+    background: #cc4457;
+    color: #fff;
+    &:hover {
+      background: #b63d4d;
+    }
   }
 }
 

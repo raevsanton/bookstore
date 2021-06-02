@@ -37,7 +37,7 @@ const Aside: React.FC<AsideProps> = ({
                     <li>
                         <Link to="/cart" className="main__button">
                             <FontAwesomeIcon icon={faBookmark} size="lg" color="#808080"/>
-                            <p>Bookshelf</p>
+                            <p>Cart</p>
                         </Link>
                     </li>
                 </ul>

@@ -1,17 +1,19 @@
-import {
-    BooksActions,
-    GET_BOOKS_ERROR,
-    GET_BOOKS_REQUEST,
-    GET_BOOKS_SUCCESS,
+import { Book, BooksActions } from "../../types/types";
+import { 
+    GET_BOOKS_REQUEST, 
+    GET_BOOKS_SUCCESS, 
+    GET_BOOKS_ERROR, 
     GET_ONE_BOOK_SUCCESS,
-} from "../actions/types";
+    REMOVE_ONE_BOOK_SUCCESS,
+    REMOVE_ONE_BOOK_ERROR
+} from "../actions/consts";
 import { InitialStateBooks } from "./types";
 
 const initialState: InitialStateBooks = {
     books: [],
-    oneBook: {},
-    loadingBooks: true,
-    error: false,
+    book: null,
+    isLoading: false,
+    isError: false,
 };
 
 export const booksReducer = (state = initialState, action: BooksActions): InitialStateBooks => {
@@ -19,28 +21,37 @@ export const booksReducer = (state = initialState, action: BooksActions): Initia
         case GET_BOOKS_REQUEST:
             return {
                 ...state,
-                loadingBooks: true
+                isLoading: true
             };
         case GET_BOOKS_SUCCESS:
             return {
                 ...state,
-                books: action.payload,
-                loadingBooks: false,
-                error: false
+                isLoading: false,
+                isError: false
             };
+        case GET_ONE_BOOK_SUCCESS:
+            return {
+                ...state,
+                book: action.payload,
+                isLoading: false,
+                isError: false
+            }
         case GET_BOOKS_ERROR:
             return {
                 ...state,
-                loadingBooks: false,
-                error: true
+                isLoading: false,
+                isError: true
             };
-        case GET_ONE_BOOK_SUCCESS: 
-            return {
-                ...state,
-                oneBook: action.payload,
-                loadingBooks: false,
-                error: false
-            }
+        case REMOVE_ONE_BOOK_SUCCESS:
+            return { 
+                ...state, 
+                books: state.books.filter((book: Book) => book.id !== action.payload)
+            };
+        case REMOVE_ONE_BOOK_ERROR:
+            return { 
+                ...state, 
+                books: state.books
+            };
         default: {
             return state;
         } 

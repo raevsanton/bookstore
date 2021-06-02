@@ -1,70 +1,84 @@
-import {
-    GET_BOOKS_ERROR,
-    GET_BOOKS_REQUEST,
-    GET_BOOKS_SUCCESS,
-    GET_ONE_BOOK_SUCCESS,
-    GetBooksErrorAction,
-    GetBooksRequestAction,
-    GetBooksSuccessAction,
-    BooksActions,
-    GetOneBookSuccessAction,
-} from "./types";
-import axios from 'axios';
-import { Book } from "../../types/types";
 import { ThunkAction } from "redux-thunk";
 import { AppStateType } from "../reducers";
-
-const BASE_URL = '/api/v1'
+import { 
+    Book, 
+    BooksActions, 
+    RemoveBookSuccessAction, 
+    GetBooksErrorAction, 
+    GetBooksRequestAction, 
+    GetBooksSuccessAction, 
+    GetOneBookSuccessAction,
+    RemoveBookErrorAction, 
+} from "../../types/types";
+import { 
+    GET_BOOKS_REQUEST, 
+    GET_BOOKS_SUCCESS, 
+    GET_BOOKS_ERROR, 
+    GET_ONE_BOOK_SUCCESS,
+    REMOVE_ONE_BOOK_SUCCESS,
+    REMOVE_ONE_BOOK_ERROR,
+} from "./consts";
+import { 
+    deleteOneBook, 
+    fetchAllBooks, 
+    fetchOneBook 
+} from "../../api";
 
 export const getBooksRequest = (): GetBooksRequestAction => ({
     type: GET_BOOKS_REQUEST
 });
-export const getBooksSuccess = (books: Book[]): GetBooksSuccessAction => ({
+export const getBooksSuccess = (): GetBooksSuccessAction => ({
     type: GET_BOOKS_SUCCESS,
-    payload: books
 });
 export const getBooksError = (): GetBooksErrorAction => ({
     type: GET_BOOKS_ERROR
 });
-export const getOneBookSuccess = (book: Book): GetOneBookSuccessAction => ({
+const getOneBooksSuccess = (book: Book): GetOneBookSuccessAction => ({
     type: GET_ONE_BOOK_SUCCESS,
     payload: book
 });
+const removeBookSuccess = (id: string): RemoveBookSuccessAction => ({
+    type: REMOVE_ONE_BOOK_SUCCESS,
+    payload: id
+});
+const removeBookError = (): RemoveBookErrorAction => ({
+    type: REMOVE_ONE_BOOK_ERROR
+});
+
 
 export const getAllBooks = (): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
         dispatch(getBooksRequest());
         try {
-            const response = await axios.get(`${BASE_URL}/books`);
-            dispatch(getBooksSuccess(response.data))
+            const { data } = await fetchAllBooks();
+            // dispatch(getBooksSuccess(data))
         } catch(error) {
             dispatch(getBooksError())
         }
     }
 };
 
-export const getOneBookById = (id: string | undefined): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
+export const getOneBook = (id: string): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
         dispatch(getBooksRequest());
         try {
-            const response = await axios.get(`${BASE_URL}/book/${id}`);
-            dispatch(getOneBookSuccess(response.data))
+            const { data } = await fetchOneBook(id);
+            dispatch(getOneBooksSuccess(data))
         } catch(error) {
             dispatch(getBooksError())
         }
     }
 };
 
-export const sortBooks = (event: string): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
+export const removeOneBook = (id: string): ThunkAction<Promise<void>, AppStateType, unknown, BooksActions> => {
     return async (dispatch) => {
-        dispatch(getBooksRequest());
         try {
-            const response = await axios.post(`${BASE_URL}/books/sort`, {
-                "sort": event
-            });
-            dispatch(getBooksSuccess(response.data))
+            await deleteOneBook(id)
+            dispatch(removeBookSuccess(id))
+            console.log('SUCCESS')
         } catch(error) {
-            dispatch(getBooksError())
+            dispatch(removeBookError())
+            console.log('ERROR')
         }
     }
 };
