@@ -1,23 +1,24 @@
-import React from "react";
-import "./itemBook.scss"
-import { ItemBookProps } from "./ItemBookTypes";
+import React from 'react';
+import './itemBook.scss';
+import { IBook } from '../../store/books/types';
 
-const ItemBook: React.FC<ItemBookProps> = ({
-    book
-}) => {
-    return (
-        <div className="book__item">
-            <div>
-                 <img src={book.cover} alt="" />
-            </div>
-            <div className="book__info">
-                <h4>{book.title}</h4>
-                {book.authors.map((author : string, index : number) => {
-                    return <p key={index}>{author}</p>
-                })}
-            </div>
-        </div>
-    );
+interface IProps {
+  book: IBook;
+}
+
+const ItemBook = (props: IProps) => {
+  const { book } = props;
+  return (
+    <div className="book__item">
+      <div>
+        <img src={book.cover} alt="cover" />
+      </div>
+      <div className="book__info">
+        <h4>{book.title}</h4>
+        {book.authors.map((author: string) => <p key={author}>{author}</p>)}
+      </div>
+    </div>
+  );
 };
 
 export default ItemBook;
