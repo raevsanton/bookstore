@@ -28,7 +28,7 @@ a {
 
 button {
   font-family: OpenSans-Regular, serif;
-  transition: .5s ease-in-out;
+  transition: .3s ease-in-out;
   border-radius: 200px;
   border: none;
   font-weight: 900;
@@ -39,10 +39,12 @@ button {
   outline: none;
   color: #fff;
   background-color: #1f4d8f;
-  box-shadow: 0 24px 24px -12px hsla(215, 64%, 34%, 0.4);
+  box-shadow: 0 16px 24px -12px hsla(215, 64%, 34%, 0.4);
   &:hover {
     background-size: 150% 100%;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
+    box-shadow: none;
+    background-color: #1a4279;
   }
 }
 

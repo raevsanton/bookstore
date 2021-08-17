@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+
+.bookpage {
+    display: flex;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 40px;
+    margin-bottom: 30px;
+    &--cart {
+        flex-direction: column;
+        display: flex;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 40px;
+        margin-bottom: 30px;
+    }
+    @include sm {
+        flex-direction: column;
+    }
+    img {
+        display: block;
+    }
+    &__cover {
+        width: fit-content;
+        height: 200px;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 0 24px 24px -12px rgba(38, 38, 38, 0.2);
+        border: 0.5px rgba(0, 0, 0, 0.14) solid;
+    }
+    &__info {
+        margin-left: 60px;
+        @include sm {
+            margin-left: 0;
+        }
+    }
+    &__authors {
+        opacity: .6;
+        margin-bottom: 30px;
+        @include sm {
+            margin-top: 10px;
+        }
+        span {
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    }
+    &__title {
+        max-width: 480px;
+        margin-bottom: 40px;
+        @include sm {
+            font-size: 25px;
+        }
+    }
+    &__subtitle {
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+    &__description {
+        max-width: 460px;
+        margin-bottom: 20px;
+    }
+    &__price {
+        margin-top: 30px;
+        display: flex;
+        color: #4f4f4f;
+        :nth-child(2) {
+            margin-left: 5px;
+            margin-top: 11px;
+        }
+        button {
+            margin-left: 40px;
+        }
+        img {
+            margin-left: 30px;
+            margin-bottom: 28px;
+        }
+    }
+}
+
+.fa-external-link-alt {
+    margin-left: 10px;
+}

@@ -1,4 +1,5 @@
 @import "../../styles/mixins.scss";
+
 .book {
   &__item {
     display: flex;
@@ -44,11 +45,5 @@
       flex-wrap: wrap;
       margin-top: 10px;
     }
-  }
-  &__remove {
-    background: #e52e71;
-    transition: all .5s linear;
-    color: #fff;
-    box-shadow: none;
   }
 }
