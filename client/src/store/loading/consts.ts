@@ -1,5 +1,0 @@
-export enum LoadingActions {
-  LOADING = 'LOADING',
-  LOADING_ERROR = 'LOADING_ERROR',
-  LOADING_SUCCESS = 'LOADING_SUCCESS',
-}

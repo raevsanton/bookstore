@@ -1,37 +1,26 @@
-import { AnyAction } from 'redux';
-import { ModalActions } from './consts';
+import { MODAL_ACTIONS } from './consts';
+import { IModal, ModalStatus } from './types';
 
-export enum ModalStatus {
-  DEFAULT = 'default',
-  SUCCESS = 'success',
-  ERROR = 'error',
-}
-
-interface IInitialStateModal {
-  modalOpen: boolean;
-  modalStatus: ModalStatus;
-}
-
-const initialState: IInitialStateModal = {
+const initialState: IModal = {
   modalOpen: false,
   modalStatus: ModalStatus.DEFAULT,
 };
 
-export const modalReducer = (state = initialState, action: AnyAction): IInitialStateModal => {
+export const modalReducer = (state: IModal = initialState, action: FSA<string>): IModal => {
   switch (action.type) {
-    case ModalActions.MODAL_OPEN:
+    case MODAL_ACTIONS.MODAL_OPEN:
       return {
         ...state,
         modalOpen: true,
       };
-    case ModalActions.MODAL_CLOSE:
+    case MODAL_ACTIONS.MODAL_CLOSE:
       return initialState;
-    case ModalActions.MODAL_SUCCESS:
+    case MODAL_ACTIONS.MODAL_SUCCESS:
       return {
         ...state,
         modalStatus: ModalStatus.SUCCESS,
       };
-    case ModalActions.MODAL_ERROR:
+    case MODAL_ACTIONS.MODAL_ERROR:
       return {
         ...state,
         modalStatus: ModalStatus.ERROR,

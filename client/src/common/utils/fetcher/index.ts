@@ -1,4 +1,4 @@
-import Axios, { AxiosResponse } from 'axios';
+import Axios from 'axios';
 
 const BASE_URL = '/api/v1';
 
@@ -6,37 +6,38 @@ const axios = Axios.create({
   withCredentials: true,
 });
 
-export enum Method {
+enum Method {
   GET = 'GET',
   POST = 'POST',
   PATCH = 'PATCH',
   PUT = 'PUT',
-  DELETE = 'DELETE'
+  DELETE = 'DELETE',
 }
 
 export const apiFetcher = {
-  get(endpoint: string, data?: any) {
-    return ajax(endpoint, Method.GET, data);
+  get(endpoint: string, body?, params?) {
+    return makeRequest(endpoint, Method.GET, body, params);
   },
-  post(endpoint: string, data?: any) {
-    return ajax(endpoint, Method.POST, data);
+  post(endpoint: string, body?, params?) {
+    return makeRequest(endpoint, Method.POST, body, params);
   },
-  put(endpoint: string, data?: any) {
-    return ajax(endpoint, Method.PUT, data);
+  put(endpoint: string, body?, params?) {
+    return makeRequest(endpoint, Method.PUT, body, params);
   },
-  delete(endpoint: string, data?: any) {
-    return ajax(endpoint, Method.DELETE, data);
+  delete(endpoint: string, body?, params?) {
+    return makeRequest(endpoint, Method.DELETE, body, params);
   },
-  patch(endpoint: string, data?: any) {
-    return ajax(endpoint, Method.PATCH, data);
+  patch(endpoint: string, body?, params?) {
+    return makeRequest(endpoint, Method.PATCH, body, params);
   },
 };
 
-async function ajax(endpoint: string, method: Method, data?: AxiosResponse) {
+async function makeRequest(endpoint: string, method: Method, data?, params?) {
   const res = await axios({
     url: `${BASE_URL}${endpoint}`,
     method,
     data,
+    params,
   });
   return res.data;
 }

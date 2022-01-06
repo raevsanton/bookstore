@@ -2,16 +2,16 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeName } from '../../store/profile/actions';
-import { AppStateType } from '../../store/rootReducer';
+import { selectTheme } from '../../store/theme/selectors';
 
 interface IProfileFormProps {
   firstName: string;
   lastName: string;
 }
 
-const Profile = () => {
+export const Profile = (): React.ReactElement => {
   const dispatch = useDispatch();
-  const { darkMode } = useSelector((state: AppStateType) => state.darkMode);
+  const { darkMode } = useSelector(selectTheme);
 
   const { register, handleSubmit } = useForm<IProfileFormProps>();
   const onSubmit = (data: IProfileFormProps) => dispatch(changeName(data.firstName, data.lastName));
@@ -47,5 +47,3 @@ const Profile = () => {
     </>
   );
 };
-
-export default Profile;

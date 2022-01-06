@@ -1,7 +1,7 @@
 import React from 'react';
 import success from '../assets/checked.svg';
 
-const Success = () => (
+export const Success = (): React.ReactElement => (
   <>
     <img src={success} alt="success" />
     <br />
@@ -9,5 +9,3 @@ const Success = () => (
     <h2>Successful</h2>
   </>
 );
-
-export default Success;

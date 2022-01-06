@@ -2,15 +2,15 @@ import React from 'react';
 import './main.scss';
 import { Switch, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { AppStateType } from '../../store/rootReducer';
-import ListBooks from '../../components/ListBooks';
-import BookPage from '../BookPage';
-import Profile from '../Profile';
-import Error from '../../components/Error';
 import { routes } from '../../common/constants/routes';
+import { ListBooks } from '../../components/ListBooks/ListBooks';
+import { BookPage } from '../BookPage/BookPage';
+import { Profile } from '../Profile/Profile';
+import { Error } from '../../components/Error/Error';
+import { selectTheme } from '../../store/theme/selectors';
 
-const Main = () => {
-  const { darkMode } = useSelector((state: AppStateType) => state.darkMode);
+export const Main = (): React.ReactElement => {
+  const { darkMode } = useSelector(selectTheme);
   darkMode ? (document.body.className = 'dark') : (document.body.className = '');
   return (
     <main>
@@ -23,5 +23,3 @@ const Main = () => {
     </main>
   );
 };
-
-export default Main;

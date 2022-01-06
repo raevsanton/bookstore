@@ -1,17 +1,14 @@
 import { AnyAction } from 'redux';
-import { ThemeActions } from './consts';
+import { THEME_ACTIONS } from './consts';
+import { ITheme } from './types';
 
-interface IInitialStateTheme {
-  darkMode: boolean;
-}
-
-const initialState: IInitialStateTheme = {
+const initialState: ITheme = {
   darkMode: false,
 };
 
-export const darkModeReducer = (state = initialState, action: AnyAction): IInitialStateTheme => {
+export const themeReducer = (state = initialState, action: AnyAction): ITheme => {
   switch (action.type) {
-    case ThemeActions.SWITCH_THEME:
+    case THEME_ACTIONS.SWITCH_THEME:
       return {
         ...state,
         darkMode: action.darkMode,

@@ -1,0 +1,42 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+            "parser": "@typescript-eslint/parser",
+            "plugins": ["@typescript-eslint"]
+        }
+    ],
+    "rules": {
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "@typescript-eslint/no-empty-function": ["error", {"allow": ["methods"]}],
+        "arrow-spacing": "error",
+        "no-confusing-arrow": "error",
+        "no-duplicate-imports": "error",
+        "no-var": "error",
+        "object-shorthand": "off",
+        "prefer-const": "error",
+        "prefer-template": "warn",
+        "no-console": "warn",
+        "no-undef": "error",
+        "eqeqeq": "warn",
+        "no-invalid-this": "error",
+        "no-return-assign": "error",
+        "no-unused-expressions": ["error", { "allowTernary": true }],
+        "no-useless-concat": "error",
+        "no-useless-return": "error",
+        "no-constant-condition": "warn",
+        "no-unused-vars": ["warn", { "argsIgnorePattern": "req|res|next|__" }]
+    }
+}

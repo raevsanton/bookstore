@@ -1,3 +1,3 @@
-export enum ThemeActions {
-  SWITCH_THEME = 'SWITCH_THEME',
-}
+export const THEME_ACTIONS = {
+  SWITCH_THEME: 'THEME_ACTIONS/SWITCH_THEME',
+} as const;

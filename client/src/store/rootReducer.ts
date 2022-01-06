@@ -1,15 +1,13 @@
 import { combineReducers } from 'redux';
-import { loadingReducer } from './loading/reducer';
 import { booksReducer } from './books/reducer';
 import { profileReducer } from './profile/reducer';
-import { darkModeReducer } from './theme/reducer';
+import { themeReducer } from './theme/reducer';
 import { modalReducer } from './modal/reducer';
 
 export const rootReducer = combineReducers({
   books: booksReducer,
   profile: profileReducer,
-  darkMode: darkModeReducer,
-  loading: loadingReducer,
+  theme: themeReducer,
   modal: modalReducer,
 });
 

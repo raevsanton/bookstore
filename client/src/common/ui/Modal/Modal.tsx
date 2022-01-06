@@ -1,17 +1,18 @@
 import React, { ReactNode } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppStateType } from '../../../store/rootReducer';
 import './modal.scss';
 import { closeModal } from '../../../store/modal/actions';
+import { selectTheme } from '../../../store/theme/selectors';
+import { selectModal } from '../../../store/modal/selectors';
 
-interface IModalProps {
+interface Props {
   children: ReactNode;
 }
 
-const Modal = ({ children }: IModalProps) => {
+export const Modal = ({ children }: Props): React.ReactElement => {
   const dispatch = useDispatch();
-  const { darkMode } = useSelector((store: AppStateType) => store.darkMode);
-  const { modalOpen } = useSelector((store: AppStateType) => store.modal);
+  const { darkMode } = useSelector(selectTheme);
+  const { modalOpen } = useSelector(selectModal);
   return (
     <>
       {modalOpen && (
@@ -34,5 +35,3 @@ const Modal = ({ children }: IModalProps) => {
     </>
   );
 };
-
-export default Modal;
