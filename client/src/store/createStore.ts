@@ -21,6 +21,6 @@ export const store = createStore(rootReducer, savedState, enhancer);
 store.subscribe(() => {
   saveState({
     profile: store.getState().profile,
-    darkMode: store.getState().darkMode,
+    theme: store.getState().theme,
   });
 });

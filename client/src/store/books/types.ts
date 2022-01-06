@@ -1,4 +1,12 @@
-export interface IBook {
+export interface IBooks {
+  list: Array<Book>;
+  book: Book;
+  parameters: Partial<Parameters>;
+  error: boolean;
+  loaded: boolean;
+}
+
+export interface Book {
   id: number;
   link: string;
   cover: string;
@@ -7,4 +15,8 @@ export interface IBook {
   authors: string[];
   description: string;
   price: number;
+}
+
+export interface Parameters {
+  sort: string;
 }

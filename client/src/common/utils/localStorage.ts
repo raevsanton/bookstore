@@ -1,3 +1,5 @@
+import { AppStateType } from '../../store/rootReducer';
+
 export const loadState = () => {
   try {
     const savedState = localStorage.getItem('state');
@@ -10,7 +12,7 @@ export const loadState = () => {
   }
 };
 
-export const saveState = (state: any) => {
+export const saveState = (state: Partial<AppStateType>): void => {
   const workingState = JSON.stringify(state);
   localStorage.setItem('state', workingState);
 };

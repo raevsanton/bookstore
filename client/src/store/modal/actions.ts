@@ -1,10 +1,10 @@
 import { Dispatch } from 'redux';
-import { ModalActions } from './consts';
+import { MODAL_ACTIONS } from './consts';
 
 export const closeModal = () => (dispatch: Dispatch): void => {
-  dispatch({ type: ModalActions.MODAL_CLOSE });
+  dispatch({ type: MODAL_ACTIONS.MODAL_CLOSE });
 };
 
 export const openModal = () => (dispatch: Dispatch): void => {
-  dispatch({ type: ModalActions.MODAL_OPEN });
+  dispatch({ type: MODAL_ACTIONS.MODAL_OPEN });
 };

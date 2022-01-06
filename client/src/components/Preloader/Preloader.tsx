@@ -1,7 +1,7 @@
 import React from 'react';
 import './preloader.scss';
 
-const Preloader = () => (
+export const Preloader = (): React.ReactElement => (
   <div className="preloader">
     <div className="preloader__wrapper">
       <div />
@@ -9,5 +9,3 @@ const Preloader = () => (
     </div>
   </div>
 );
-
-export default Preloader;

@@ -1,12 +1,12 @@
 import React from 'react';
 import './switch.scss';
 import { useSelector, useDispatch } from 'react-redux';
-import { AppStateType } from '../../../store/rootReducer';
 import { switchTheme } from '../../../store/theme/actions';
+import { selectTheme } from '../../../store/theme/selectors';
 
-const Switch = () => {
+export const Switch = (): React.ReactElement => {
   const dispatch = useDispatch();
-  const { darkMode } = useSelector((state: AppStateType) => state.darkMode);
+  const { darkMode } = useSelector(selectTheme);
   return (
     <div className="switch" onClick={() => dispatch(switchTheme(!darkMode))}>
       <button type="button" className={`switch__line ${darkMode && 'on-line'}`} />
@@ -14,5 +14,3 @@ const Switch = () => {
     </div>
   );
 };
-
-export default Switch;

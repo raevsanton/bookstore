@@ -1,9 +1,6 @@
 import { Dispatch } from 'redux';
-import { ThemeActions } from './consts';
+import { THEME_ACTIONS } from './consts';
 
 export const switchTheme = (darkMode: boolean) => (dispatch: Dispatch): void => {
-  dispatch({
-    type: ThemeActions.SWITCH_THEME,
-    darkMode,
-  });
+  dispatch({ type: THEME_ACTIONS.SWITCH_THEME, darkMode });
 };

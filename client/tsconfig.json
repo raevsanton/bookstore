@@ -33,7 +33,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "src",
-    "files.d.ts"
+    "src/**/*",
+    "index.d.ts"
   ]
 }

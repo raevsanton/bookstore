@@ -1,12 +1,10 @@
 import React from 'react';
-import Aside from './components/Aside';
-import Main from './pages/Main';
+import { Main } from './pages/Main/Main';
+import { Aside } from './components/Aside/Aside';
 
-const App = () => (
+export const App = (): React.ReactElement => (
   <div className="main__content">
     <Aside />
     <Main />
   </div>
 );
-
-export default App;

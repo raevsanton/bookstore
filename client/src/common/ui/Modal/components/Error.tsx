@@ -1,7 +1,7 @@
 import React from 'react';
 import error from '../assets/cancel.svg';
 
-const Error = () => (
+export const Error = (): React.ReactElement => (
   <>
     <img src={error} alt="error" />
     <br />
@@ -9,5 +9,3 @@ const Error = () => (
     <h2>Error</h2>
   </>
 );
-
-export default Error;
