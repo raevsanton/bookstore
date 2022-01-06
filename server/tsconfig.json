@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["es6"],
+    "outDir": "./dist",
     "allowJs": true,
-    "outDir": "build",
-    "rootDir": "src",
-    "strict": true,
+    "target": "es6",
     "noImplicitAny": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true
-  }
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "esModuleInterop": true
+  },
+  "lib": ["es6", "dom"],
+  "baseUrl": "./src"
 }
