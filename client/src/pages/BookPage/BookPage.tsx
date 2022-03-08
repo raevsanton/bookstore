@@ -1,8 +1,6 @@
 import React from 'react';
 import './bookPage.scss';
 import { RouteComponentProps, useParams } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBook, deleteBook } from '../../store/books/actions';
 import { closeModal, openModal } from '../../store/modal/actions';
@@ -75,10 +73,7 @@ export const BookPage = ({ history }: Props): React.ReactElement => {
             </div>
             <p className="bookpage__subtitle">{`«${book?.subtitle}»`}</p>
             <p className="bookpage__description">{book?.description}</p>
-            <a href={book?.link} target="_blank" rel="noopener noreferrer">
-              Preview
-              <FontAwesomeIcon icon={faExternalLinkAlt} size="1x" color="#808080" />
-            </a>
+            <a href={book?.link} target="_blank" rel="noopener noreferrer">Preview</a>
             <div className={`bookpage__price ${darkMode && 'dark-white'}`}>
               <h1>{book?.price}</h1>
               <h3>$</h3>

@@ -129,9 +129,6 @@ main {
 }
 
 nav {
-  p {
-    margin-left: 15px;
-  }
   ul {
     @include md {
       display: flex;
