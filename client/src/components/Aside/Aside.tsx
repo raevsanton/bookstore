@@ -1,8 +1,6 @@
 import React from 'react';
 import './aside.scss';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { useSelector } from 'react-redux';
 import face from '../../assets/images/face.jpg';
 import { AppStateType } from '../../store/rootReducer';
@@ -27,7 +25,6 @@ export const Aside = (): React.ReactElement => {
         <ul>
           <li>
             <Link to={routes.main} className="main__button">
-              <FontAwesomeIcon icon={faBook} size="lg" color="#808080" />
               <p>My Library</p>
             </Link>
           </li>
